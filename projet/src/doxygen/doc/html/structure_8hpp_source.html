@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Visualiseur d&#39;algorithme:  Fichier source de structure.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Visualiseur d&#39;algorithme
+   </div>
+   <div id="projectbrief">Framework pour la visualisation d&#39;algorithmes interactifs</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">structure.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="structure_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _STRUCTURE_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _STRUCTURE_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;GL/glcorearb.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_math.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;gsl/gsl_eigen.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;daeloader/colladainterface.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="textbox_8hpp.html">textbox.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Model de donnée typée (model 3D associé à chaque état)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceEtat.html">Etat</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <span class="keyword">enum class</span> Noeud { SIMPLE , COURANT , VISITED , SELECT , CHOIX };</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//     enum class Arbre { SIMPLE , ACTIF , FEUILLE , FILS , PERE , ONCLE }; // Pour eventuel visualisation d&#39;algo sur arbre</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structSceneVertex.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structSceneVertex.html">SceneVertex</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <span class="comment">// Dimension pour la position des vertex</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     <span class="comment">// ici 3 car en 3D</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> PositionSize = 3;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <span class="comment">// Dimension pour la couleur</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="comment">// ici 3 car RGB sans canal alpha</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NormalSize = 3;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     <span class="keywordtype">float</span> Position[PositionSize];</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;     <span class="keywordtype">float</span> Normal[NormalSize];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classStructure.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classStructure.html">Structure</a> { <span class="comment">// sera virtuelle ou sous forme de template</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;     <span class="comment">// Coordonnées des sommets de la structure</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     <span class="keyword">const</span> <span class="keywordtype">char</span>*                _path_fichier;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     std::vector&lt;SceneVertex&gt;   _vertices; <span class="comment">// FIXME: to const</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     <span class="keywordtype">bool</span>                       _est_init;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     <span class="comment">// ordre des indices des coordonnées de la structure</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     <span class="comment">// 0, 1, 2, 0, 4, 5</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;     <span class="comment">// -&gt; génerera l&#39;arete des coordonnées d&#39;indice 0 et 1</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     <span class="comment">// -&gt; puis 2 et 0, puis 4 et 5</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;     std::vector&lt;GLuint&gt;        _indices;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;     <span class="comment">// On associe à chaque coordonnées (indice de coord en clef) son etat</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;     std::vector&lt;Etat::Noeud&gt;   _vertex_to_etat;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;     <span class="comment">// Scale du model (correspond à la plus petite norme entre deux sommets divisé par 2)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;     <span class="keywordtype">double</span>                     _scale;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;     <a class="code" href="classTextBox.html">TextBox</a>*                   _text_box;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;     </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;     <a class="code" href="classStructure.html#a530fd6c5b4f999a7b06b3c4dad07337c">Structure</a>(std::string nom_fichier, <a class="code" href="classTextBox.html">TextBox</a>* textbox);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;     </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;     <span class="keyword">virtual</span> <a class="code" href="classStructure.html#a2d27a247175436df0976f24a83a47b5e">~Structure</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classStructure.html#a9f9c7f0adff513ccef085b40cee7f6e6">compute_coordonnes</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classStructure.html#ae99db977c0b38122644cf458ea3d5974">charger</a>() = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="classStructure.html#aa359fa1eec0c2983f10ec94bb14d600b">est_init</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;     </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;     <span class="comment">// Getters</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;     std::vector&lt;GLuint&gt;*       get_indices();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;     std::vector&lt;SceneVertex&gt;*  get_vertices();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;     std::vector&lt;Etat::Noeud&gt;*  get_vertex_to_etat();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;     <span class="keywordtype">double</span>                     get_scale();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;};</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceEtat_html"><div class="ttname"><a href="namespaceEtat.html">Etat</a></div><div class="ttdef"><b>Definition:</b> <a href="structure_8hpp_source.html#l00022">structure.hpp:22</a></div></div>
+<div class="ttc" id="classStructure_html"><div class="ttname"><a href="classStructure.html">Structure</a></div><div class="ttdoc">Classe gerant les structures de données chargées dans l&#39;IHM. </div><div class="ttdef"><b>Definition:</b> <a href="structure_8hpp_source.html#l00050">structure.hpp:50</a></div></div>
+<div class="ttc" id="classStructure_html_a9f9c7f0adff513ccef085b40cee7f6e6"><div class="ttname"><a href="classStructure.html#a9f9c7f0adff513ccef085b40cee7f6e6">Structure::compute_coordonnes</a></div><div class="ttdeci">void compute_coordonnes()</div><div class="ttdoc">Calcul du placement. </div><div class="ttdef"><b>Definition:</b> <a href="structure_8cpp_source.html#l00017">structure.cpp:17</a></div></div>
+<div class="ttc" id="textbox_8hpp_html"><div class="ttname"><a href="textbox_8hpp.html">textbox.hpp</a></div><div class="ttdoc">Gère la text box. </div></div>
+<div class="ttc" id="classStructure_html_a2d27a247175436df0976f24a83a47b5e"><div class="ttname"><a href="classStructure.html#a2d27a247175436df0976f24a83a47b5e">Structure::~Structure</a></div><div class="ttdeci">virtual ~Structure()</div><div class="ttdoc">Destructeur virtuel. </div><div class="ttdef"><b>Definition:</b> <a href="structure_8cpp_source.html#l00047">structure.cpp:47</a></div></div>
+<div class="ttc" id="classStructure_html_ae99db977c0b38122644cf458ea3d5974"><div class="ttname"><a href="classStructure.html#ae99db977c0b38122644cf458ea3d5974">Structure::charger</a></div><div class="ttdeci">virtual void charger()=0</div><div class="ttdoc">Chargement de la structure de donnée. </div></div>
+<div class="ttc" id="classStructure_html_aa359fa1eec0c2983f10ec94bb14d600b"><div class="ttname"><a href="classStructure.html#aa359fa1eec0c2983f10ec94bb14d600b">Structure::est_init</a></div><div class="ttdeci">bool est_init()</div><div class="ttdoc">Est initialisé </div><div class="ttdef"><b>Definition:</b> <a href="structure_8cpp_source.html#l00042">structure.cpp:42</a></div></div>
+<div class="ttc" id="structSceneVertex_html"><div class="ttname"><a href="structSceneVertex.html">SceneVertex</a></div><div class="ttdoc">structure d&#39;un vertex incluant sa position et couleur </div><div class="ttdef"><b>Definition:</b> <a href="structure_8hpp_source.html#l00032">structure.hpp:32</a></div></div>
+<div class="ttc" id="classStructure_html_a530fd6c5b4f999a7b06b3c4dad07337c"><div class="ttname"><a href="classStructure.html#a530fd6c5b4f999a7b06b3c4dad07337c">Structure::Structure</a></div><div class="ttdeci">Structure(std::string nom_fichier, TextBox *textbox)</div><div class="ttdoc">Constructeur de la structure de donnée. </div><div class="ttdef"><b>Definition:</b> <a href="structure_8cpp_source.html#l00010">structure.cpp:10</a></div></div>
+<div class="ttc" id="classTextBox_html"><div class="ttname"><a href="classTextBox.html">TextBox</a></div><div class="ttdoc">classe gerant l&#39;affichage de texte durant l&#39;execution </div><div class="ttdef"><b>Definition:</b> <a href="textbox_8hpp_source.html#l00017">textbox.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche 17 Mai 2015 19:48:56 pour Visualiseur d&#39;algorithme par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

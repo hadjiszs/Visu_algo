@@ -1,0 +1,125 @@
+\hypertarget{classMainWindow}{\section{Référence de la classe Main\+Window}
+\label{classMainWindow}\index{Main\+Window@{Main\+Window}}
+}
+
+
+classe gerant le placement et interactions des principaux widgets dans la fenetre principale  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+hpp$>$}
+
+
+
+Graphe d'héritage de Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classMainWindow__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}{Main\+Window} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de la fenetre principale. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a255a5c38fd871c168fac835692871d62}{selection\+\_\+graphe} ()
+\begin{DoxyCompactList}\small\item\em Selection d'un graphe. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a00c50c04982c1f685f281606e8e1fff5}{charger\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Chargeur du menu. \end{DoxyCompactList}\item 
+void \hyperlink{classMainWindow_a6d34935ca23b2c54a784ae2b7944a1ad}{charger\+\_\+opengl} ()
+\begin{DoxyCompactList}\small\item\em Chargeur Open\+G\+L. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe gerant le placement et interactions des principaux widgets dans la fenetre principale 
+
+Définition à la ligne 39 du fichier mainwindow.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}{\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection[{Main\+Window}]{\setlength{\rightskip}{0pt plus 5cm}Main\+Window\+::\+Main\+Window (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classMainWindow_a8b244be8b7b7db1b08de2a2acb9409db}
+
+
+Constructeur de la fenetre principale. 
+
+il s'agit de la fenetre principale, elle n'a pas de parent, mais on laisse le parametre par commodité 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em parent} & le widget parent \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 8 du fichier mainwindow.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classMainWindow_a00c50c04982c1f685f281606e8e1fff5}{\index{Main\+Window@{Main\+Window}!charger\+\_\+menu@{charger\+\_\+menu}}
+\index{charger\+\_\+menu@{charger\+\_\+menu}!Main\+Window@{Main\+Window}}
+\subsubsection[{charger\+\_\+menu}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::charger\+\_\+menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMainWindow_a00c50c04982c1f685f281606e8e1fff5}
+
+
+Chargeur du menu. 
+
+Appelé lors de la construction de la fenetre principale, construit la barre de menu, et associe les signaux aux actions 
+
+Définition à la ligne 68 du fichier mainwindow.\+cpp.
+
+\hypertarget{classMainWindow_a6d34935ca23b2c54a784ae2b7944a1ad}{\index{Main\+Window@{Main\+Window}!charger\+\_\+opengl@{charger\+\_\+opengl}}
+\index{charger\+\_\+opengl@{charger\+\_\+opengl}!Main\+Window@{Main\+Window}}
+\subsubsection[{charger\+\_\+opengl}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::charger\+\_\+opengl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classMainWindow_a6d34935ca23b2c54a784ae2b7944a1ad}
+
+
+Chargeur Open\+G\+L. 
+
+Appelé lors de la construction de la fenetre principale, cette fonction appelle le constructeur de \hyperlink{classSceneGL}{Scene\+G\+L} créant le widget Open\+G\+L qui sera integré dans la fenetre principale 
+
+Définition à la ligne 118 du fichier mainwindow.\+cpp.
+
+\hypertarget{classMainWindow_a255a5c38fd871c168fac835692871d62}{\index{Main\+Window@{Main\+Window}!selection\+\_\+graphe@{selection\+\_\+graphe}}
+\index{selection\+\_\+graphe@{selection\+\_\+graphe}!Main\+Window@{Main\+Window}}
+\subsubsection[{selection\+\_\+graphe}]{\setlength{\rightskip}{0pt plus 5cm}void Main\+Window\+::selection\+\_\+graphe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMainWindow_a255a5c38fd871c168fac835692871d62}
+
+
+Selection d'un graphe. 
+
+Appelé lors de la reception d'un signal emis par l'utilisateur lorsqu'il demande d'ouvrir un nouveau graphe dans le menu. Cette fonction ouvre une boite de dialogue permettant de selectionner le graphe, puis va créer une structure de graphe à partir du fichier sélectionné. 
+
+Définition à la ligne 31 du fichier mainwindow.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mainwindow_8hpp}{mainwindow.\+hpp}\item 
+\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}\end{DoxyCompactItemize}

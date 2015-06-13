@@ -1,0 +1,45 @@
+1- Définition du sujet:
+-visualisation/interaction
+-structures de données et algorithmes ajoutés par l'utilisateur
+-contraintes: portabilité, documentation, maintenabilité, récence
+-choix des technologies: Qt/OpenGL, GLM, C++
+
+2 - Exemple: parcours de graphe
+
+-problème: comment placer les noeuds?
+  -le graphe affiché doit être:
+    -lisible
+    -le plus symétrique possible
+    -sans croisements etc...
+  On peut ajouter 3 images: un graphe propre et symétrique, un graphe avec croisement, un graphe sans croisement mais non symétrique
+  
+
+-solutions: méthode de tracé de graphe
+-force directed graph drawing: 
+  -simulation d'un système physique
+  -accessible
+  -peu performant
+  -résultat trop aléatoire
+
+-spectral graph drawing:
+  -calcul matriciel
+  -performant
+  -algorithmes associés
+  -choix techno: GLM, lié à OpenGL donc choix évident
+  
+-problème: comment identifier les noeuds
+  -nécéssaire pour un parcours
+
+-solution:
+  -représentation d'un noeud par une forme géométrique basique
+  -changement de couleur pour un parcours
+  -billboarding pour afficher l'indice d'un noeud
+  
+problème: comment rendre lisible un graphe trop dense?
+  -figure 5 du rapport
+  -mise à jour de taille du modèle 3d en fonction de la norme minimale
+  
+démo: parcours de graphe
+
+
+conclusion:

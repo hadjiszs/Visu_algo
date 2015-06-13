@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Visualiseur d&#39;algorithme:  Fichier source de mainwindow.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Visualiseur d&#39;algorithme
+   </div>
+   <div id="projectbrief">Framework pour la visualisation d&#39;algorithmes interactifs</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mainwindow.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _MAINWINDOW_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _MAINWINDOW_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QGridLayout&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QVBoxLayout&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QtCore/QVariant&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QAction&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;QButtonGroup&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;QHeaderView&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;QMenu&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;QMenuBar&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;QStatusBar&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;QFileDialog&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="scene_8hpp.html">scene.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graphe_8hpp.html">graphe.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classMainWindow.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMainWindow.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;     QAction*           _action_graphe;         </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;     QAction*           _action_arbre;          </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     QAction*           _action_options;        </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;     QAction*           _action_rotation;       </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;     QMenuBar*          _menu_bar;              </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     QStatusBar*        _status_bar;            </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;     QMenu*             _menu_fichier;          </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;     QMenu*             _menu_ouvrir;           </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;     QMenu*             _menu_outils;           </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;     QTimer*            _gl_update_timer;       </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     QWidget*           _central_widget;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;     QGridLayout*       _central_layout;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;     QPushButton*       _zoom_positiv;          </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;     QPushButton*       _zoom_negativ;          </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;     QWidget*           _sidebar_widget;        </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;     QVBoxLayout*       _sidebar_layout;        </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;     <a class="code" href="classSceneGL.html">SceneGL</a>*           _gl_scene_context;      </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;     <a class="code" href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>(QWidget* parent = 0);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a255a5c38fd871c168fac835692871d62">selection_graphe</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a00c50c04982c1f685f281606e8e1fff5">charger_menu</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a6d34935ca23b2c54a784ae2b7944a1ad">charger_opengl</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classMainWindow_html_a6d34935ca23b2c54a784ae2b7944a1ad"><div class="ttname"><a href="classMainWindow.html#a6d34935ca23b2c54a784ae2b7944a1ad">MainWindow::charger_opengl</a></div><div class="ttdeci">void charger_opengl()</div><div class="ttdoc">Chargeur OpenGL. </div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00116">mainwindow.cpp:116</a></div></div>
+<div class="ttc" id="classSceneGL_html"><div class="ttname"><a href="classSceneGL.html">SceneGL</a></div><div class="ttdoc">classe gerant le contexte OpenGL de l&#39;application </div><div class="ttdef"><b>Definition:</b> <a href="scene_8hpp_source.html#l00027">scene.hpp:27</a></div></div>
+<div class="ttc" id="classMainWindow_html_a8b244be8b7b7db1b08de2a2acb9409db"><div class="ttname"><a href="classMainWindow.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=0)</div><div class="ttdoc">Constructeur de la fenetre principale. </div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00007">mainwindow.cpp:7</a></div></div>
+<div class="ttc" id="classMainWindow_html_a255a5c38fd871c168fac835692871d62"><div class="ttname"><a href="classMainWindow.html#a255a5c38fd871c168fac835692871d62">MainWindow::selection_graphe</a></div><div class="ttdeci">void selection_graphe()</div><div class="ttdoc">Selection d&#39;un graphe. </div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00034">mainwindow.cpp:34</a></div></div>
+<div class="ttc" id="scene_8hpp_html"><div class="ttname"><a href="scene_8hpp.html">scene.hpp</a></div><div class="ttdoc">Gère le contexte OpenGL. </div></div>
+<div class="ttc" id="classMainWindow_html_a00c50c04982c1f685f281606e8e1fff5"><div class="ttname"><a href="classMainWindow.html#a00c50c04982c1f685f281606e8e1fff5">MainWindow::charger_menu</a></div><div class="ttdeci">void charger_menu()</div><div class="ttdoc">Chargeur du menu. </div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8cpp_source.html#l00066">mainwindow.cpp:66</a></div></div>
+<div class="ttc" id="graphe_8hpp_html"><div class="ttname"><a href="graphe_8hpp.html">graphe.hpp</a></div><div class="ttdoc">Gère la structure de donnée de graphe. </div></div>
+<div class="ttc" id="classMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdoc">classe gerant le placement et interactions des principaux widgets dans la fenetre principale ...</div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8hpp_source.html#l00038">mainwindow.hpp:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi 19 Mars 2015 17:00:17 pour Visualiseur d&#39;algorithme par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

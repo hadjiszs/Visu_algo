@@ -1,0 +1,106 @@
+\hypertarget{scene_8cpp}{\section{Référence du fichier scene.\+cpp}
+\label{scene_8cpp}\index{scene.\+cpp@{scene.\+cpp}}
+}
+
+
+Implementation de \hyperlink{scene_8hpp}{scene.\+hpp}.  
+
+
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\\*
+{\ttfamily \#include $<$glm/gtx/transform.\+hpp$>$}\\*
+{\ttfamily \#include $<$glm/gtc/type\+\_\+ptr.\+hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}scene.\+hpp\char`\"{}}\\*
+Graphe des dépendances par inclusion de scene.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scene_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structparam__lux}{param\+\_\+lux}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{scene_8cpp_a816ab7d5c2ce1f0a01216042837beb93}{\#define {\bfseries G\+L\+M\+\_\+\+F\+O\+R\+C\+E\+\_\+\+R\+A\+D\+I\+A\+N\+S}}\label{scene_8cpp_a816ab7d5c2ce1f0a01216042837beb93}
+
+\item 
+\hypertarget{scene_8cpp_ac7b3a9f069bf13fef2ece8337f933fb5}{\#define {\bfseries A\+F\+F\+D\+E\+B\+U\+G}~1}\label{scene_8cpp_ac7b3a9f069bf13fef2ece8337f933fb5}
+
+\item 
+\#define {\bfseries W\+A\+R\+N}(M\+S\+G)
+\item 
+\#define {\bfseries I\+S\+O\+K}(M\+S\+G)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{scene_8cpp_a5f18c7186cd8bb18342e1294505fa63c}{double {\bfseries angle\+Y} = 0.\+0}\label{scene_8cpp_a5f18c7186cd8bb18342e1294505fa63c}
+
+\item 
+\hypertarget{scene_8cpp_aa834f0cff99511d8ba9b1c04bdea07eb}{double {\bfseries angle\+Z} = 0.\+0}\label{scene_8cpp_aa834f0cff99511d8ba9b1c04bdea07eb}
+
+\item 
+\hypertarget{scene_8cpp_add1bbbe708372f7d961669f4520ecaa7}{int {\bfseries old\+\_\+posx} = 0}\label{scene_8cpp_add1bbbe708372f7d961669f4520ecaa7}
+
+\item 
+\hypertarget{scene_8cpp_aa818cdb551875a5ba4b87c157167e488}{int {\bfseries old\+\_\+posy} = 0}\label{scene_8cpp_aa818cdb551875a5ba4b87c157167e488}
+
+\item 
+\hypertarget{scene_8cpp_abdac33eeb786cfd354032f8e94c27070}{bool {\bfseries \+\_\+hold} = false}\label{scene_8cpp_abdac33eeb786cfd354032f8e94c27070}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Implementation de \hyperlink{scene_8hpp}{scene.\+hpp}. 
+
+
+
+Définition dans le fichier \hyperlink{scene_8cpp_source}{scene.\+cpp}.
+
+
+
+\subsection{Documentation des macros}
+\hypertarget{scene_8cpp_ac8055c7eae91b1c50a3189f735c54c73}{\index{scene.\+cpp@{scene.\+cpp}!I\+S\+O\+K@{I\+S\+O\+K}}
+\index{I\+S\+O\+K@{I\+S\+O\+K}!scene.\+cpp@{scene.\+cpp}}
+\subsubsection[{I\+S\+O\+K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+S\+O\+K(
+\begin{DoxyParamCaption}
+\item[{}]{M\+S\+G}
+\end{DoxyParamCaption}
+)}}\label{scene_8cpp_ac8055c7eae91b1c50a3189f735c54c73}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)033[42;01m"}                                \(\backslash\)
+                         \textcolor{stringliteral}{"[\_POSITION\_]\(\backslash\)t[%s:%d] -> [%s]\(\backslash\)n"}              \(\backslash\)
+                         \textcolor{stringliteral}{"[\_DEBUG\_MSG\_]\(\backslash\)t[%s]"}                          \(\backslash\)
+                         \textcolor{stringliteral}{"\(\backslash\)033[00m\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_, \_\_func\_\_, MSG);
+\end{DoxyCode}
+
+
+Définition à la ligne 36 du fichier scene.\+cpp.
+
+\hypertarget{scene_8cpp_a54c0b0a398d16827eb0609c67d519af0}{\index{scene.\+cpp@{scene.\+cpp}!W\+A\+R\+N@{W\+A\+R\+N}}
+\index{W\+A\+R\+N@{W\+A\+R\+N}!scene.\+cpp@{scene.\+cpp}}
+\subsubsection[{W\+A\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+A\+R\+N(
+\begin{DoxyParamCaption}
+\item[{}]{M\+S\+G}
+\end{DoxyParamCaption}
+)}}\label{scene_8cpp_a54c0b0a398d16827eb0609c67d519af0}
+{\bfseries Valeur \+:}
+\begin{DoxyCode}
+printf(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)033[41;01m"}                                \(\backslash\)
+                         \textcolor{stringliteral}{"[\_POSITION\_]\(\backslash\)t[%s:%d] -> [%s]\(\backslash\)n"}              \(\backslash\)
+                         \textcolor{stringliteral}{"[\_DEBUG\_MSG\_]\(\backslash\)t[%s]"}                          \(\backslash\)
+                         \textcolor{stringliteral}{"\(\backslash\)033[00m\(\backslash\)n"}, \_\_FILE\_\_, \_\_LINE\_\_, \_\_func\_\_, MSG);
+\end{DoxyCode}
+
+
+Définition à la ligne 31 du fichier scene.\+cpp.
+

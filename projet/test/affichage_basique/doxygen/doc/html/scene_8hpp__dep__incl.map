@@ -1,0 +1,6 @@
+<map id="scene.hpp" name="scene.hpp">
+<area shape="rect" id="node2" href="$mainwindow_8hpp.html" title="Gère la fenetre principale. " alt="" coords="43,80,162,107"/>
+<area shape="rect" id="node5" href="$scene_8cpp.html" title="Implementation de scene.hpp. " alt="" coords="185,80,268,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Programme principale. " alt="" coords="5,155,80,181"/>
+<area shape="rect" id="node4" href="$mainwindow_8cpp.html" title="Implementation de mainwindow.hpp. " alt="" coords="103,155,222,181"/>
+</map>

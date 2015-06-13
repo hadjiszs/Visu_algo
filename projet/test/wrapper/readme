@@ -1,0 +1,1 @@
+pour compiler: g++ -o Wrapper main.cpp -llua5.2

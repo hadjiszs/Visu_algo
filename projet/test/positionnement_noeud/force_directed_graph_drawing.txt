@@ -1,0 +1,18 @@
+// Note qui servira dans le rapport
+
+Algorithme de positionnement ordonné de noeuds de graphes
+
+-----
+1/ Force directed graph drawing
+-----
+
+Cette méthode de tracé consiste à associer un graphe à un système physique.
+On attribut des coordonnées aléatoires à chaque sommet puis on met à jour ces coordonnées en fonction des forces qui s'appliquent sur le sommet.
+Le calcul des forces dépend du modèle choisit.
+La façon la plus simple est de considérer que les arêtes du graphes sont des ressorts.
+Le calcul des forces et la mise à jour des coordonnées font que le système se rapproche d'un point d'équilibre où les sommets resteront fixe et donc bien positionnés.
+
+Le 1er algorithme simulant des ressorts est limité aux graphes de 30 sommets maximum, en plus de ne pas être précis(condition d'arrêt de la boucle principale qui ne permet pas une solution dans tous les cas).
+Le 2ème algorithme est plus précis au niveau de la condition d'arrêt, il n'est pas limité par le nombre de sommet, mais demande plus de calcul.
+
+De manière générale, les autres méthodes demandent des connaissances en maths dont nous n'avons pas connaissances (équation aux dérivées partielles, géométrie non euclidienne, etc..).

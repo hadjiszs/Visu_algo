@@ -1,0 +1,169 @@
+\hypertarget{classTextBox}{\section{Référence de la classe Text\+Box}
+\label{classTextBox}\index{Text\+Box@{Text\+Box}}
+}
+
+
+classe gerant l'affichage de texte durant l'execution  
+
+
+
+
+{\ttfamily \#include $<$textbox.\+hpp$>$}
+
+
+
+Graphe d'héritage de Text\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classTextBox__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Text\+Box\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classTextBox__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTextBox_a8cbbaa2326c8547e180382a58df84243}{Text\+Box} (Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de la boite de texte. \end{DoxyCompactList}\item 
+void \hyperlink{classTextBox_ab124db8fc7720b543a8df13235d6fe96}{afficher} ()
+\begin{DoxyCompactList}\small\item\em Met à jour le contenu texte. \end{DoxyCompactList}\item 
+void \hyperlink{classTextBox_acca69b10b49ae950a6d2f04c99c7ad80}{ajouter} (std\+::string str, int num\+\_\+ligne)
+\begin{DoxyCompactList}\small\item\em Ajoute du texte. \end{DoxyCompactList}\item 
+void \hyperlink{classTextBox_a5b4239bff751787a73c0182553822a5f}{remplacer} (std\+::string str, int num\+\_\+ligne, int npos)
+\begin{DoxyCompactList}\small\item\em Remplace le texte. \end{DoxyCompactList}\item 
+int \hyperlink{classTextBox_a64c57f5a3516613220609a78615df9d0}{newline} ()
+\begin{DoxyCompactList}\small\item\em Retourne un numero d'une nouvelle ligne. \end{DoxyCompactList}\item 
+\hypertarget{classTextBox_a4c1596312c23884283a8ed1ddc157498}{void \hyperlink{classTextBox_a4c1596312c23884283a8ed1ddc157498}{clear} ()}\label{classTextBox_a4c1596312c23884283a8ed1ddc157498}
+
+\begin{DoxyCompactList}\small\item\em efface le buffer actuel \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe gerant l'affichage de texte durant l'execution 
+
+Définition à la ligne 17 du fichier textbox.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classTextBox_a8cbbaa2326c8547e180382a58df84243}{\index{Text\+Box@{Text\+Box}!Text\+Box@{Text\+Box}}
+\index{Text\+Box@{Text\+Box}!Text\+Box@{Text\+Box}}
+\subsubsection[{Text\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Text\+Box\+::\+Text\+Box (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classTextBox_a8cbbaa2326c8547e180382a58df84243}
+
+
+Constructeur de la boite de texte. 
+
+il s'agit de text box, on y affichera des informations durant l'execution 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em parent} & le widget parent \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 7 du fichier textbox.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classTextBox_ab124db8fc7720b543a8df13235d6fe96}{\index{Text\+Box@{Text\+Box}!afficher@{afficher}}
+\index{afficher@{afficher}!Text\+Box@{Text\+Box}}
+\subsubsection[{afficher}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Box\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTextBox_ab124db8fc7720b543a8df13235d6fe96}
+
+
+Met à jour le contenu texte. 
+
+est appelé de manière reguliere par le main thread 
+
+Définition à la ligne 29 du fichier textbox.\+cpp.
+
+\hypertarget{classTextBox_acca69b10b49ae950a6d2f04c99c7ad80}{\index{Text\+Box@{Text\+Box}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!Text\+Box@{Text\+Box}}
+\subsubsection[{ajouter}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Box\+::ajouter (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str, }
+\item[{int}]{num\+\_\+ligne}
+\end{DoxyParamCaption}
+)}}\label{classTextBox_acca69b10b49ae950a6d2f04c99c7ad80}
+
+
+Ajoute du texte. 
+
+Ajoute du texte à la suite de la ligne 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em str} & texte à ajouter \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+ligne} & numero de la ligne \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 51 du fichier textbox.\+cpp.
+
+\hypertarget{classTextBox_a64c57f5a3516613220609a78615df9d0}{\index{Text\+Box@{Text\+Box}!newline@{newline}}
+\index{newline@{newline}!Text\+Box@{Text\+Box}}
+\subsubsection[{newline}]{\setlength{\rightskip}{0pt plus 5cm}int Text\+Box\+::newline (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classTextBox_a64c57f5a3516613220609a78615df9d0}
+
+
+Retourne un numero d'une nouvelle ligne. 
+
+Permet d'avoir un checkpoint vers une nouvelle ligne pour pouvoir modifier cette ligne grace au numero renvoyé 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em numero} & de ligne \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 63 du fichier textbox.\+cpp.
+
+\hypertarget{classTextBox_a5b4239bff751787a73c0182553822a5f}{\index{Text\+Box@{Text\+Box}!remplacer@{remplacer}}
+\index{remplacer@{remplacer}!Text\+Box@{Text\+Box}}
+\subsubsection[{remplacer}]{\setlength{\rightskip}{0pt plus 5cm}void Text\+Box\+::remplacer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{str, }
+\item[{int}]{num\+\_\+ligne, }
+\item[{int}]{npos}
+\end{DoxyParamCaption}
+)}}\label{classTextBox_a5b4239bff751787a73c0182553822a5f}
+
+
+Remplace le texte. 
+
+Remplace le texte passé en parametre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em str} & texte à remplacer \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+ligne} & numero de la ligne \\
+\hline
+\mbox{\tt in}  & {\em npos} & position du premier caractere à remplacer \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 56 du fichier textbox.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{textbox_8hpp}{textbox.\+hpp}\item 
+\hyperlink{textbox_8cpp}{textbox.\+cpp}\end{DoxyCompactItemize}

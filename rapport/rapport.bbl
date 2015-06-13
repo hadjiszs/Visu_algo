@@ -1,0 +1,61 @@
+\begin{thebibliography}{Kny03}
+
+\bibitem[bil]{billboard}
+Billboarding tutorial.
+\newblock
+  \url{http://www.lighthouse3d.com/opengl/billboarding/index.php?billCheat}.
+
+\bibitem[BLO]{BLOPEX}
+Blopex.
+\newblock \url{https://bitbucket.org/joseroman/blopex}.
+
+\bibitem[GSL]{GSL}
+Gnu scientific library.
+\newblock \url{http://www.gnu.org/software/gsl/}.
+
+\bibitem[IRR]{IRRLICHT}
+Irrlicht engine.
+\newblock \url{http://irrlicht.sourceforge.net/}.
+
+\bibitem[Kny03]{lobpcg}
+Andrew Knyazev.
+\newblock Is there life after the lanczos method? what is lobpcg?
+\newblock
+  \url{http://math.ucdenver.edu/~aknyazev/research/conf/BIRS03/BIRS03.pdf}, nov
+  2003.
+
+\bibitem[Kob12]{forced_theorie}
+Stephen Kobourov.
+\newblock Spring embedders and force directed graph drawing algorithms.
+\newblock \url{http://arxiv.org/abs/1201.3011}, jan 2012.
+
+\bibitem[Kor05]{spectral_theorie}
+Yehuda Koren.
+\newblock Drawing graphs by eigenvectors: Theory and practice.
+\newblock page~9, jun 2005.
+
+\bibitem[LA15]{intel}
+Andrew Lauritzen and Michael Apodaca.
+\newblock Effcient rendering with directx12 on intel graphics.
+\newblock
+  \url{https://software.intel.com/sites/default/files/managed/4a/38/Efficient-Rendering-with-DirectX-12-on-Intel-Graphics.pdf},
+  2015.
+
+\bibitem[OGR]{OGRE3d}
+Ogre3d.
+\newblock \url{http://www.ogre3d.org/}.
+
+\bibitem[Spi07]{spectral_pratique}
+Daniel Spielman.
+\newblock Spectral graph theory and its applications.
+\newblock \url{http://www.cs.yale.edu/homes/spielman/sgta/SpectTut.pdf}, 2007.
+
+\bibitem[TRI]{TRILINOS}
+Trilinos.
+\newblock \url{http://trilinos.org/}.
+
+\bibitem[UNI]{UNITY}
+Unity3d.
+\newblock \url{https://unity3d.com/}.
+
+\end{thebibliography}

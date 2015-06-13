@@ -1,0 +1,213 @@
+\hypertarget{classShader}{\section{Référence de la classe Shader}
+\label{classShader}\index{Shader@{Shader}}
+}
+
+
+Classe gerant la compilation et verrouillage du vertex et fragment shaders.  
+
+
+
+
+{\ttfamily \#include $<$shader.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classShader_a2005793fac68487fb1f8b76fcdd6dfa2}{Shader} (std\+::string ver\+\_\+shad, std\+::string fra\+\_\+shad)
+\begin{DoxyCompactList}\small\item\em Constructeur shader. \end{DoxyCompactList}\item 
+\hyperlink{classShader_aff01df87e8a102f270b5b135a295e59d}{$\sim$\+Shader} ()
+\begin{DoxyCompactList}\small\item\em Destructeur shader. \end{DoxyCompactList}\item 
+void \hyperlink{classShader_ad6fe36e8abe4842214b604467ae653c4}{del} ()
+\begin{DoxyCompactList}\small\item\em Fonction de formattage. \end{DoxyCompactList}\item 
+void \hyperlink{classShader_a41eeb2d28f161e822e09b8471ceb1bad}{charger} (Q\+Open\+G\+L\+Functions $\ast$function\+\_\+contexte)
+\begin{DoxyCompactList}\small\item\em Fonction de chargement. \end{DoxyCompactList}\item 
+bool \hyperlink{classShader_a2ecd01e476085e7e53d8d2d0ffb45944}{verif\+\_\+compil\+\_\+shader} (G\+Lint id\+\_\+shader, std\+::string nom\+\_\+shader)
+\begin{DoxyCompactList}\small\item\em Fonction de verification de la compilation. \end{DoxyCompactList}\item 
+bool \hyperlink{classShader_af019e34beca44951ef6245fcdfc0daae}{verif\+\_\+link\+\_\+shader} (G\+Lint id\+\_\+program, std\+::string nom)
+\begin{DoxyCompactList}\small\item\em Fonction de verification de l'edition des liens. \end{DoxyCompactList}\item 
+\hypertarget{classShader_a2f22c874367a2a1df32772ae53687810}{G\+Lint {\bfseries get\+\_\+id\+\_\+position} ()}\label{classShader_a2f22c874367a2a1df32772ae53687810}
+
+\item 
+\hypertarget{classShader_a5b7e6535c346214a2ba3ec99292dbdd4}{G\+Lint {\bfseries get\+\_\+id\+\_\+texture} ()}\label{classShader_a5b7e6535c346214a2ba3ec99292dbdd4}
+
+\item 
+\hypertarget{classShader_af79004b7246e6764ac7295d7589248f0}{G\+Lint {\bfseries get\+\_\+id\+\_\+color} ()}\label{classShader_af79004b7246e6764ac7295d7589248f0}
+
+\item 
+\hypertarget{classShader_ad6a6e43bd572807fc9a953a6b2a3ef9d}{G\+Lint {\bfseries get\+\_\+id\+\_\+shader\+\_\+program} ()}\label{classShader_ad6a6e43bd572807fc9a953a6b2a3ef9d}
+
+\item 
+\hypertarget{classShader_a41ebfcbdd94a879d792061f10accdd89}{G\+Lint {\bfseries get\+\_\+id\+\_\+vertex\+\_\+shader} ()}\label{classShader_a41ebfcbdd94a879d792061f10accdd89}
+
+\item 
+\hypertarget{classShader_a734d169d6c629fc8736709c4968d40b2}{G\+Lint {\bfseries get\+\_\+id\+\_\+fragme\+\_\+shader} ()}\label{classShader_a734d169d6c629fc8736709c4968d40b2}
+
+\item 
+\hypertarget{classShader_a6cf65e9e7d4c32f291f8459147892c74}{G\+Lint {\bfseries get\+\_\+vertex\+\_\+source\+\_\+length} ()}\label{classShader_a6cf65e9e7d4c32f291f8459147892c74}
+
+\item 
+\hypertarget{classShader_a777e9d01476d05d903046d56b101a6d7}{G\+Lint {\bfseries get\+\_\+fragme\+\_\+source\+\_\+length} ()}\label{classShader_a777e9d01476d05d903046d56b101a6d7}
+
+\item 
+\hypertarget{classShader_a542ce38b62b30f0dee196a26d592f832}{const G\+Lchar $\ast$ {\bfseries get\+\_\+vertex\+\_\+source} ()}\label{classShader_a542ce38b62b30f0dee196a26d592f832}
+
+\item 
+\hypertarget{classShader_a5a428e47bd98890bf28971533130f7fd}{const G\+Lchar $\ast$ {\bfseries get\+\_\+fragme\+\_\+source} ()}\label{classShader_a5a428e47bd98890bf28971533130f7fd}
+
+\item 
+\hypertarget{classShader_ac8585f98b706b27e44ea126b912c2ef7}{void {\bfseries set\+\_\+id\+\_\+position} (G\+Lint)}\label{classShader_ac8585f98b706b27e44ea126b912c2ef7}
+
+\item 
+\hypertarget{classShader_ae53cba470afb9b1318cf062325c5a18e}{void {\bfseries set\+\_\+id\+\_\+texture} (G\+Lint)}\label{classShader_ae53cba470afb9b1318cf062325c5a18e}
+
+\item 
+\hypertarget{classShader_ab0ce36a04563d3e69f2af3bff31aee48}{void {\bfseries set\+\_\+id\+\_\+color} (G\+Lint)}\label{classShader_ab0ce36a04563d3e69f2af3bff31aee48}
+
+\item 
+\hypertarget{classShader_a7cf99a9274ff980faae21d367c70409c}{void {\bfseries set\+\_\+id\+\_\+shader\+\_\+program} (G\+Lint)}\label{classShader_a7cf99a9274ff980faae21d367c70409c}
+
+\item 
+\hypertarget{classShader_af02fe000cd740b0e2a69d9830064178d}{void {\bfseries set\+\_\+id\+\_\+vertex\+\_\+shader} (G\+Lint)}\label{classShader_af02fe000cd740b0e2a69d9830064178d}
+
+\item 
+\hypertarget{classShader_a68fddcb84673de670b8f95bcae6f0627}{void {\bfseries set\+\_\+id\+\_\+fragme\+\_\+shader} (G\+Lint)}\label{classShader_a68fddcb84673de670b8f95bcae6f0627}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe gerant la compilation et verrouillage du vertex et fragment shaders. 
+
+Définition à la ligne 22 du fichier shader.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classShader_a2005793fac68487fb1f8b76fcdd6dfa2}{\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\subsubsection[{Shader}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+::\+Shader (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{ver\+\_\+shad, }
+\item[{std\+::string}]{fra\+\_\+shad}
+\end{DoxyParamCaption}
+)}}\label{classShader_a2005793fac68487fb1f8b76fcdd6dfa2}
+
+
+Constructeur shader. 
+
+Constructeur shaders 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em ver\+\_\+shad} & le vertex shaders \\
+\hline
+\mbox{\tt in}  & {\em fra\+\_\+shad} & le fragment shaders \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 10 du fichier shader.\+cpp.
+
+\hypertarget{classShader_aff01df87e8a102f270b5b135a295e59d}{\index{Shader@{Shader}!````~Shader@{$\sim$\+Shader}}
+\index{````~Shader@{$\sim$\+Shader}!Shader@{Shader}}
+\subsubsection[{$\sim$\+Shader}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+::$\sim$\+Shader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classShader_aff01df87e8a102f270b5b135a295e59d}
+
+
+Destructeur shader. 
+
+Destructeur shader 
+
+Définition à la ligne 42 du fichier shader.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classShader_a41eeb2d28f161e822e09b8471ceb1bad}{\index{Shader@{Shader}!charger@{charger}}
+\index{charger@{charger}!Shader@{Shader}}
+\subsubsection[{charger}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+::charger (
+\begin{DoxyParamCaption}
+\item[{Q\+Open\+G\+L\+Functions $\ast$}]{function\+\_\+contexte}
+\end{DoxyParamCaption}
+)}}\label{classShader_a41eeb2d28f161e822e09b8471ceb1bad}
+
+
+Fonction de chargement. 
+
+Compile le vertex et fragment shaders, puis fait l'edition des liens des deux shaders 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em function\+\_\+contexte} & resolver de fonctions \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 51 du fichier shader.\+cpp.
+
+\hypertarget{classShader_ad6fe36e8abe4842214b604467ae653c4}{\index{Shader@{Shader}!del@{del}}
+\index{del@{del}!Shader@{Shader}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+::del (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classShader_ad6fe36e8abe4842214b604467ae653c4}
+
+
+Fonction de formattage. 
+
+Fonction de formattage 
+
+Définition à la ligne 173 du fichier shader.\+cpp.
+
+\hypertarget{classShader_a2ecd01e476085e7e53d8d2d0ffb45944}{\index{Shader@{Shader}!verif\+\_\+compil\+\_\+shader@{verif\+\_\+compil\+\_\+shader}}
+\index{verif\+\_\+compil\+\_\+shader@{verif\+\_\+compil\+\_\+shader}!Shader@{Shader}}
+\subsubsection[{verif\+\_\+compil\+\_\+shader}]{\setlength{\rightskip}{0pt plus 5cm}bool Shader\+::verif\+\_\+compil\+\_\+shader (
+\begin{DoxyParamCaption}
+\item[{G\+Lint}]{id\+\_\+shader, }
+\item[{std\+::string}]{nom\+\_\+shader}
+\end{DoxyParamCaption}
+)}}\label{classShader_a2ecd01e476085e7e53d8d2d0ffb45944}
+
+
+Fonction de verification de la compilation. 
+
+Verifie les flag de status de compilation de chacun des shaders 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em id\+\_\+shader} & identifiant du shader dont on verifie sa compilation \\
+\hline
+\mbox{\tt in}  & {\em nom\+\_\+shader} & nom du shader dont on verifie sa compilation \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 137 du fichier shader.\+cpp.
+
+\hypertarget{classShader_af019e34beca44951ef6245fcdfc0daae}{\index{Shader@{Shader}!verif\+\_\+link\+\_\+shader@{verif\+\_\+link\+\_\+shader}}
+\index{verif\+\_\+link\+\_\+shader@{verif\+\_\+link\+\_\+shader}!Shader@{Shader}}
+\subsubsection[{verif\+\_\+link\+\_\+shader}]{\setlength{\rightskip}{0pt plus 5cm}bool Shader\+::verif\+\_\+link\+\_\+shader (
+\begin{DoxyParamCaption}
+\item[{G\+Lint}]{id\+\_\+program, }
+\item[{std\+::string}]{nom}
+\end{DoxyParamCaption}
+)}}\label{classShader_af019e34beca44951ef6245fcdfc0daae}
+
+
+Fonction de verification de l'edition des liens. 
+
+Verifie les flag de status d'edition des liens de chacun des shaders 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em id\+\_\+program} & identifiant du programme resultant de l'edition des liens du vertex et fragment shaders \\
+\hline
+\mbox{\tt in}  & {\em nom} & nom du programme resultant de l'edition des liens du vertex et fragment shaders \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 101 du fichier shader.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{shader_8hpp}{shader.\+hpp}\item 
+\hyperlink{shader_8cpp}{shader.\+cpp}\end{DoxyCompactItemize}

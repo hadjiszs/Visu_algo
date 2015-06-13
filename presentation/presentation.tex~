@@ -1,0 +1,464 @@
+% -- Présentation
+% Module : INFO606
+% Année  : 2014-2015
+
+% HADJI Monir et MOHIMONT Lucas
+
+\documentclass[handout]{beamer}
+
+% -----
+% ----- Preambule
+% -----
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[francais]{babel}
+
+\usetheme{Madrid}
+\useoutertheme{infolines}
+%\useoutertheme{split}
+
+\setbeamertemplate{headline}
+{
+  \leavevmode
+  \hbox
+      {%  Partie gauche : titre de la section
+        \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right,rightskip=1em]{section in head/foot}%
+          \usebeamerfont{subsection in head/foot}\insertsectionhead
+        \end{beamercolorbox}%
+        % Partie droite : titre de la sous-section
+        \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left,leftskip=1em]{subsection in head/foot}%
+          \usebeamerfont{section in head/foot}\insertsubsectionhead
+        \end{beamercolorbox}%
+      }
+      \vskip0pt
+}
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Pour chaque début de section
+\AtBeginSection
+{
+  \begin{frame}
+    \frametitle{Table des matières}
+    \tableofcontents[currentsection, hideothersubsections]
+  \end{frame}
+}
+
+% Page de garde
+\title{Le droit à l'oubli de Google}
+\author[L. Mohimont / M. Hadji]{Lucas Mohimont \& Monir Hadji}
+\institute[INFO606]{Licence 3 Info - INFO606 - Projet de programmation\\Resp. Module : Christophe Jaillet}
+\date{2014-2015}
+
+% -----
+% ----- Debut document
+% -----
+\begin{document}
+
+% Frame de presentation
+\begin{frame}
+  \titlepage
+  \begin{center}
+    \includegraphics[width=3cm]{contents/urca.jpg}
+  \end{center}
+\end{frame}
+
+% Frame de table des matières
+\begin{frame}
+  \frametitle{Table des matières}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Section
+\section{Présentation}
+
+% Sous section
+\subsection{Définition}
+
+% Frame
+\begin{frame}
+  \frametitle{E-réputation}
+
+  \begin{block}{Définition}
+    \begin{quote}
+      « L'e-réputation d'une personne est l’opinion commune d'une personne sur Internet. [...] »\\
+    \end{quote}
+    - http://fr.wikipedia.org/wiki/E-réputation
+  \end{block}
+  
+  \begin{exampleblock}{Exemples pouvant ternir une E-réputation}
+    \begin{itemize}
+      \item Articles sur une affaire de délits, de dettes, ou autre
+        \begin{itemize}
+        \item[$\hookrightarrow$] Relayage de cette affaire sur les réseaux sociaux
+        \end{itemize}
+      \item Sites et liens diffamatoires
+      \item Images et informations compromettantes
+      \item Anciens blog
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+% Frame
+\begin{frame}
+  \frametitle{Le droit à l'oubli}
+
+  \begin{block}{Définition}
+    \begin{itemize}
+    \item Pas de définition précise
+    \item La conséquence -lorsqu'appliqué- doit permettre de ne plus ternir l'e-réputation du concerné
+    \end{itemize}
+  \end{block}
+
+  \begin{exampleblock}{Exemple de critères de l'application du droit à l'oubli}
+    \begin{itemize}
+    \item Subjectif et application au cas par cas, mais...
+    \item La page doit concerner le revendicateur du droit (d'une quelconque manière)
+    \item La page web doit contenir des informations erronées et/ou périmées et/ou ternir l'e-réputation du concerné
+      \begin{itemize}
+      \item[$\hookrightarrow$] Articles sur une affaire qui s’avère être une erreur judiciaire
+      \item[$\hookrightarrow$] Ancienne pages datant de quelques années avec informations obsolètes sur le concerné
+      \end{itemize}
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+% Section
+\section{Affaire Google Spain et Mario Costeja}
+
+% Sous-section
+\subsection{Historique}
+
+% Frame
+\begin{frame}
+  \frametitle{L'internaute espagnol}
+
+  \begin{block}{Mario Costeja Gonz\'alez}
+    \begin{itemize}
+    \item Consultant
+    \item Mauvaise e-réputation à cause d'une affaire de dettes bouclés depuis 16 ans
+    \item Lui pose problèmes dans la vie de tout les jours
+      \begin{itemize}
+        \item[$\hookrightarrow$] Remarques désobligeantes de la part de ses clients
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+
+  \begin{alertblock}{(2009) Réclamations}
+    \begin{itemize}
+      \item Désindexation sur Google Search des pages concernant l'affaire de dettes
+      \item Demandé à l'Agence Espagnol de Protection de Données (AEPD)
+    \end{itemize}
+  \end{alertblock}
+
+\end{frame}
+ 
+% Sous section
+\subsection{Parcours du dossier}
+
+% Frame
+\begin{frame}
+  \frametitle{Prémisses de l'affaire}
+
+  \begin{block}{Ouverture d'un dossier}
+    \begin{itemize}
+    \item (2012) L'AEPD va ouvrir un dossier contre Google Spain et Google Inc.
+    \item (2012) La justice espagnole s'empare du dossier
+    \item (2013) Le dossier remonte à la CJUE          
+    \end{itemize}
+  \end{block}
+
+  \begin{alertblock}{CJUE}
+    \begin{itemize}
+    \item Cour de Justice de l'Union Européenne
+    \item Présidé par 28 juges représentant chacun un état membre de l'UE 
+    \end{itemize}
+  \end{alertblock}
+
+\end{frame}
+
+% Frame
+\begin{frame}
+  \frametitle{Position des différents acteurs}
+  
+  \begin{block}{L'avocat générale}
+    \begin{itemize}
+    \item Google n'était pas responsable des données apparaissant sur les pages indexés du concerné
+    \item Donc le ``droit à l'oubli'' numérique ne peut pas être invoqué à son encontre
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{La CJUE}
+    \begin{itemize}   
+    \item S'appuie sur une directive de 1995 pour conclure
+    \item Rare : en général la cour approuve la position de l'avocat générale
+    \item Montre d'une certaine manière la délicatesse du sujet
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% Sous section
+\subsection{Décision}
+
+% Frame
+\begin{frame}
+  \frametitle{Arrêté du 13 mai 2014}  
+
+  \begin{block}{Décision}
+    \begin{itemize}
+    \item Décision mise publique : Arrêté du 13 mai 2014
+    \item Google doit faire en sorte qu'un internaute européen ait le droit de demander la suppression de données le concernant pouvant porter atteinte à son ``e-réputation''
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% Section
+\section{Mise en oeuvre}
+
+% Sous section
+\subsection{Google}
+
+% Frame
+\begin{frame}
+  \frametitle{Google et son formulaire}
+  
+  \begin{block}{Formulaire en ligne}
+    \begin{itemize}
+      \item La demande (brève explication du contexte)
+      \item Liste des URL des articles en questions
+      \item Justification pour chaque URL
+      \item Fournir pièce d'identité
+      \item Traitement et décision en interne
+    \end{itemize}    
+  \end{block}
+
+  \begin{alertblock}{Eventuel problèmes}
+    \begin{itemize}
+      \item Décision d'un droit public par un acteur privé
+      \item Désindexations ne se font que sur les versions européenne de Google
+        \begin{itemize}
+        \item[$\hookrightarrow$] Le droit énoncé par l’arrêté du 13 mai 2014 est territoriale !
+        \item[$\hookrightarrow$] Les pages désindexé de google.(fr|it|...) sont toujours accessible sur google.(com|ca|co.jp|...)
+        \end{itemize}
+    \end{itemize}    
+  \end{alertblock}
+
+\end{frame}
+
+% Sous section
+\subsection{Les autres}
+
+% Frame
+\begin{frame}
+  \frametitle{Les autres moteurs de recherche}
+
+  \begin{alertblock}{Attention}
+    \begin{itemize}
+    \item Il n'y a pas que Google qui est concerné par l'arrêté du 13 mai 2014
+    \item Il y a aussi les autres moteurs de recherche
+    \item On parle davantage de Google car c'est le moteur de recherche le plus utilisé
+    \end{itemize}
+  \end{alertblock}
+
+  \begin{exampleblock}{Exemple}
+    bing de Microsoft
+  \end{exampleblock}
+
+\end{frame}
+
+% Section
+\section{Difficultés}
+
+% Sous section
+\subsection{Équilibre}
+
+% Frame
+\begin{frame}
+  \frametitle{Équilibre}
+
+  \begin{block}{Trouver un équilibre entre}
+    \begin{itemize}
+    \item Le droit à l'oubli
+    \item Le droit à l'information
+    \item La liberté d'expression
+    \item La liberté de la presse
+    \end{itemize}
+  \end{block}
+
+  \begin{exampleblock}{Exemple}
+    \begin{itemize}         
+    \item Une personne demande le retrait d'articles de presse le concernant sur une affaire quelconque
+      \begin{itemize}
+      \item Google n'accepte pas le déréférencement
+        \begin{itemize}          
+        \item[$\hookrightarrow$] Droit à l'oubli respecté ?
+        \end{itemize}
+      \item Google accepte le déréférencement
+        \begin{itemize}
+        \item[$\hookrightarrow$] Droit à l'information respectée ?
+        \item[$\hookrightarrow$] Liberté de la presse respectée ?
+        \item[$\hookrightarrow$] Liberté d'expression respectée ?
+        \end{itemize}
+      \end{itemize}
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+% Sous section
+\subsection{Concordance des termes}
+
+% Frame
+\begin{frame}
+  \frametitle{Concordance des termes}
+
+  \begin{block}{Illustration}
+    \begin{itemize}
+    \item Si on part du principe que la presse est une des sources des traces de l'histoire
+    \item alors si on efface un article de presse pour le droit à l'oubli...
+    \end{itemize}
+  \end{block}
+
+  % Un peu trop brutale et sensationnaliste
+  % à modifier pour rendre ça plus rond/souple/sobre
+  \begin{exampleblock}{Proposition d'un syllogisme illustratif}
+    \begin{itemize}
+      \item[$\rightarrow$] Désindexer des articles impliquerait l'oubli de l'histoire
+      \item[$\rightarrow$] Le droit à l'oubli implique de désindexer des articles
+      \item[$\rightarrow$] Le droit à l'oubli impliquerait l'oubli de l'histoire
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+% Sous section
+\subsection{Polémique}
+
+% Frame
+\begin{frame}
+  \frametitle{Wikimédia}
+
+  \begin{exampleblock}{Citations Wikimédia}
+    \begin{itemize}
+    \item
+      \begin{quotation}
+         « En conséquence, les résultats de recherche précis sont en train de disparaître en Europe sans aucune explication publique, aucune preuve réelle, sans contrôle judiciaire, et aucun processus d'appel. Le résultat est un Internet criblé de trous de mémoire, l'information gênante disparaît tout simplement »         
+      \end{quotation}
+    \item[] - Lila Tretikov (Directrice exécutive de Wikimédia)
+    \item
+      \begin{quotation}
+        « C'est une atteinte grave à l'accès à l'information »
+      \end{quotation}
+    \item[] - Christophe Henner (vice-président de Wikimedia France)
+    \end{itemize}
+  \end{exampleblock}
+
+  \begin{exampleblock}{Citation Wikipédia}
+    \begin{itemize}
+    \item
+      \begin{quotation}
+        « projet de loi complètement fou qui doit être corrigé »
+      \end{quotation}
+    \item[] - Jimmy Wales (co-fondateur de Wikipédia)
+    \end{itemize}
+  \end{exampleblock}  
+  
+\end{frame}
+
+% Frame
+\begin{frame}
+  \frametitle{Google}
+  
+  \begin{block}{Google est de base pas d'accord}
+    \begin{itemize}
+    \item[$\hookrightarrow$] considère que le responsable des informations est l’hébergeur du contenu pointé
+    \item[$\hookrightarrow$] qu'il est plus simple de directement demander à l’hébergeur de prendre les mesures adéquates
+    \end{itemize}      
+  \end{block}
+
+  \begin{exampleblock}{Citation Google}
+    \begin{itemize}
+    \item
+      \begin{quotation} 
+        « [...] Il s'agit d'une collision entre le droit à l'oubli et le droit de savoir. Du point de vue de Google, il y a un équilibre. Nous estimons, après avoir examiné cette décision, que l'équilibre est rompu. »
+      \end{quotation}
+    \item[] - Eric Schmidt (Président du conseil d'administration de Google)
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+% Section
+\section{Conclusion}
+
+% Frame
+\begin{frame}
+  \frametitle{Conclusion}
+  
+  \begin{block}{}
+    \begin{itemize}
+      \item Légitime de douter de l'efficacité/fiabilité des mesures prises
+      \item Mais véritable prise de conscience de l'importance d'Internet du côté de la législation
+    \end{itemize}
+  \end{block}
+
+  \begin{exampleblock}{Sujet de portée mondiale : exemple}
+    \begin{itemize}
+      \item Cour de Tokyo condamne Google à supprimer toutes les pages concernant une affaire judiciaire
+    \end{itemize}
+  \end{exampleblock}
+
+  \begin{alertblock}{Nuances}
+    \begin{itemize}
+    \item Mesure prise pour une seule affaire bien particulière, pour un seul citoyen
+    \item Il s'agit d'une demande de désindexation mondiale, pas seulement territoriale
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+% Frame
+\begin{frame}
+  \frametitle{Sources}
+
+    \begin{block}{}
+      \begin{itemize}      
+        % http://droit-finances.commentcamarche.net/faq/39882-formulaire-google-droit-a-l-oubli-adresse-et-mode-d-emploi
+      \item \texttt{http://droit-finances.commentcamarche.net/}
+        % Plusieurs articles sur developpez.com
+      \item \texttt{http://www.developpez.com/actu/}
+        % http://www.e-net-b.be/page/formulaire-droit-oubli-google-e-reputation-internet.html
+      \item \texttt{http://www.e-net-b.be/}
+        % https://support.google.com/legal/contact/lr_eudpa?product=websearch&hl=fr
+      \item \texttt{https://support.google.com/}
+        % https://www.laquadrature.net/fr/recommandations-sur-le-droit-a-l-oubli-par-la-quadrature-du-net-et-reporters-sans-frontieres
+      \item \texttt{https://www.laquadrature.net/}
+        % http://contribuez.cnnumerique.fr/debat/droit-%C3%A0-loubli-et-d%C3%A9r%C3%A9f%C3%A9rencement
+      \item \texttt{http://contribuez.cnnumerique.fr/debat/}
+        % http://www.lefigaro.fr/secteur/high-tech/2014/05/30/01007-20140530ARTFIG00302-google-comment-faire-respecter-son-droit-a-l-oubli.php
+      \item \texttt{http://www.lefigaro.fr/secteur/high-tech/}
+        % http://www.rtbf.be/info/medias/detail_droit-a-l-oubli-google-condamne-a-effacer-des-donnees
+      \item \texttt{http://www.rtbf.be/}
+        % http://www.latribune.fr/technos-medias/internet/20141010trib19fafb27f/droit-a-l-oubli-google-condamne-au-japon-taubira-veut-proteger-la-presse.html
+      \item \texttt{http://www.latribune.fr/}
+        % http://www.01net.com/editorial/626088/remi-mathis-wikimedia-france-le-droit-a-l-oubli-viole-la-liberte-d-information/
+      \item \texttt{http://www.01net.com/}
+        % http://curia.europa.eu/jcms/upload/docs/application/pdf/2014-05/cp140070fr.pdf
+      \item \texttt{http://curia.europa.eu/}
+        % http://www.metronews.fr/high-tech/droit-a-l-oubli-wikipedia-fustige-la-cour-de-justice-de-l-union-europeenne/mnhg!B9RENqkRWNn/
+      \item \texttt{http://www.metronews.fr/}
+      \end{itemize}  
+  \end{block}
+
+\end{frame}
+
+% Frame
+\begin{frame}
+  \frametitle{}
+
+  \begin{block}{}
+    \begin{center}
+      Merci pour votre attention\\
+      Des questions ?
+    \end{center}
+  \end{block}  
+\end{frame}
+
+\end{document}

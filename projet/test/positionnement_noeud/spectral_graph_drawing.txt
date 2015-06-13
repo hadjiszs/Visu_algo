@@ -1,0 +1,92 @@
+// Note qui servira dans le rapport
+
+Algorithme de positionnement ordonné de noeuds de graphes
+
+-----
+2/ Spectral graph drawing
+-----
+
+// => representation par matrice de laplace
+
+On représente le graphe G=(V,E) avec une matrice de Laplace L(G)
+Cette matrice a dans sa diagonale le degré du noeud i=j
+
+L_{i,j}(G) = -w(i,j)
+
+avec w(i,j) le poids de l'arête (i;j) ou l'arête (j;i) dans le cas de graphe orienté
+
+pour un graphe orienté, on y met le poids de l'arête qui relie les deux noeuds, peu importe le sens de cette arête
+
+Cette matrice est toujours symétrique
+
+car peut être obtenu par le produit de la matrice d'incidence I(G) et la transposée de I(G), T(I(G)), ce qui donne une matrice symetrique
+
+L(G) = I(G)*T(I(G))
+
+demo:
+T(T(A)*A) = T(A)*T(T(A)) = T(A)*A
+avec T(A) la transposée de A
+
+matrice égale à sa transposée => matrice symétrique
+
+// => calcul
+
+on calcul les vecteurs propre de L(G)
+on prends le "plus petit vecteur" qui sera la solution (i.e le vecteur contenant la position de chaque noeud)
+
+dans le cas d'un espace en 3D:
+on a 3 vecteurs x_1 x_2 et x_3
+
+x_1(i) x_2(i) x_3(i) sont les coordonnées (xyz) du noeud i
+
+soit l'équation (10) du paragraphe 3.1 de l'article de yehuda koren (page 9)
+numérateur represente la longueur moyenne des arêtes
+denominateur represente la distance moyenne entre chaque noeud
+
+et cette fraction doit être minimale
+donc on minimise le numérateur (=> longueur moyenne des arêtes de taille pas trop grande)
+et maximise le dénominateur (=> la distance moyenne entre chaque noeud qui doit être maximale de manière relative au numérateur) ce qui va créer un équilibre entre ces deux métriques
+
+on contraint le calcul de telle sorte que la variance sur x_1 et x_2 et x_3 soit égales à une constante (== 1 par exemple)
+ainsi, les noeuds sont forcés d'avoir une dispersion équitable sur les axes respectifs
+
+pas compris ce qu'est sensé réellement representer l'application E : R^n -> R, elle represente l'énergie à minimiser, mais concrétement : incompréhension sur ce que c'est concrétement
+
+-- démarche concréte:
+
+le deuxieme plus petit vecteur propre V2 (associé à la deuxieme plus petite valeur propre) sera le vecteur qui contiendra les coordonnées Xi des noeuds i du graphe
+
+le troisieme plus petit vecteur propre V3 sera le vecteur qui contiendra les coordonnées Yi des noeuds i du graphe
+
+le 4eme plus petit vecteur propre V4 sera le vecteur qui contiendra les coordonnées Zi des noeuds i du graphe
+
+cela est aussi vrai pour les dimensions N > 3 mais qui n'ont pas grand interet ici pour la representation graphique
+
+une mise en application sur graphe de petite taille a été faite sur scilab pour bien se convaincre
+
+on peut difficillement dépasser les 100 noeuds sur scilab, cette approche sera normalement bien plus performante une fois codé en c++
+
+pour mettre cela en pratique, nous devons pouvoir faire des calculs d'algébre linéaire et en particulier le calcul des valeurs/vecteurs propres, le reste (calcul de la matrice de laplace) est élementaire et n'a donc pas besoin de fonctions particulières
+
+nous devons donc pouvoir calculer des vecteurs/valeurs propres, nous pouvons utiliser cet algorithme
+http://en.wikipedia.org/wiki/LOBPCG
+et/ou
+utiliser l'api c++ pour faire appel au moteur scilab dans notre futur code c++
+https://www.scilab.org/fr/scilab/interoperability/calculation_engine/c
+
+-----
+2/ Deuxième méthode 'Force directed graph drawing'
+-----
+
+Cette méthode de tracé consiste à associer un graphe à un système physique.
+On attribut des coordonnées aléatoires à chaque sommet puis on met à jour ces coordonnées en fonction des forces qui s'appliquent sur le sommet.
+Le calcul des forces dépend du modèle choisit.
+La façon la plus simple est de considérer que les arêtes du graphes sont des ressorts.
+Le calcul des forces et la mise à jour des coordonnées font que le système se rapproche d'un point d'équilibre où les sommets resteront fixe et donc bien positionnés.
+
+Le 1er algorithme simulant des ressorts est limité aux graphes de 30 sommets maximum, en plus de ne pas être précis(condition d'arrêt de la boucle principale qui ne permet pas une solution dans tous les cas).
+Le 2ème algorithme est plus précis au niveau de la condition d'arrêt, il n'est pas limité par le nombre de sommet, mais demande plus de calcul.
+
+De manière générale, les autres méthodes demandent des connaissances en maths dont nous n'avons pas connaissances (équation aux dérivées partielles, géométrie non euclidienne, etc..).
+Source:
+http://arxiv.org/abs/1201.3011

@@ -1,0 +1,29 @@
+\select@language {french}
+\contentsline {section}{Introduction}{1}{section*.2}
+\contentsline {section}{\numberline {1}Choix des technologies}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Visualisation}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Interaction}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Calcul matriciel}{3}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Langage de programmation}{3}{subsection.1.4}
+\contentsline {section}{\numberline {2}Cas de la structure graphe}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}Placement des noeuds}{4}{subsection.2.1}
+\contentsline {paragraph}{Force directed graph drawing}{4}{section*.3}
+\contentsline {paragraph}{Spectral graph drawing}{5}{section*.4}
+\contentsline {subsubsection}{\numberline {2.1.1}Repr\IeC {\'e}sentation matricielle}{5}{subsubsection.2.1.1}
+\contentsline {paragraph}{Application au graphe de r\IeC {\'e}f\IeC {\'e}rence G}{5}{section*.5}
+\contentsline {subparagraph}{Preuve}{6}{section*.6}
+\contentsline {subsubsection}{\numberline {2.1.2}Approche intuitive}{6}{subsubsection.2.1.2}
+\contentsline {paragraph}{\IeC {\`A} Noter}{6}{section*.7}
+\contentsline {subsubsection}{\numberline {2.1.3}Proc\IeC {\'e}dure en pratique}{7}{subsubsection.2.1.3}
+\contentsline {paragraph}{Application au graphe de r\IeC {\'e}f\IeC {\'e}rence G}{8}{section*.8}
+\contentsline {subsubsection}{\numberline {2.1.4}Technologie}{8}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}Rendu}{10}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Ar\IeC {\^e}tes}{10}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}N\IeC {\oe }uds}{11}{subsubsection.2.2.2}
+\contentsline {paragraph}{Structure}{11}{section*.9}
+\contentsline {paragraph}{Repr\IeC {\'e}sentation}{12}{section*.10}
+\contentsline {subparagraph}{Probl\IeC {\`e}me de dimension}{13}{section*.11}
+\contentsline {subsubsection}{\numberline {2.2.3}Cam\IeC {\'e}ra}{14}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Texte}{15}{subsubsection.2.2.4}
+\contentsline {section}{\numberline {3}Conclusions et perspectives}{18}{section.3}
+\contentsline {section}{\numberline {4}Remerciements}{18}{section.4}

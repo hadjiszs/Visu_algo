@@ -1,0 +1,5 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Choix des technologies}{4}{0}{1}
+\beamer@sectionintoc {2}{Cas de la structure graphe}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Probl\IeC {\`e}me de placements}{6}{0}{2}

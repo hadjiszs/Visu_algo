@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Visualiseur d&#39;algorithme:  Fichier source de graphe.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Visualiseur d&#39;algorithme
+   </div>
+   <div id="projectbrief">Framework pour la visualisation d&#39;algorithmes interactifs</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">graphe.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="graphe_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _GRAPHE_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _GRAPHE_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;liste.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;file.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="structure_8hpp.html">structure.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structliste__adjacence__t.html">   13</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     <a class="code" href="classListe.html">Liste</a>** dat;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     <span class="keywordtype">int</span> nbrA;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;     <span class="keywordtype">int</span> nbrS;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;} <a class="code" href="structliste__adjacence__t.html">liste_adjacence_t</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structmatrice__laplace__t.html">   19</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;     <span class="keywordtype">int</span>** dat;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;     <span class="keywordtype">int</span> nbrA;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;     <span class="keywordtype">int</span> nbrS;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;} <a class="code" href="structmatrice__laplace__t.html">matrice_laplace_t</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structmatrice__adjacence__t.html">   25</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;     <span class="keywordtype">int</span>** dat;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;     <span class="keywordtype">int</span> nbrA;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     <span class="keywordtype">int</span> nbrS;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <a class="code" href="structmatrice__adjacence__t.html">matrice_adjacence_t</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="structparcours__t.html">   31</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     <a class="code" href="classFile.html">File</a>* f;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="structparcours__t.html">parcours_t</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classGraphe.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGraphe.html">Graphe</a> : <span class="keyword">public</span> <a class="code" href="classStructure.html">Structure</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;     <span class="keywordtype">int</span>                        _A; <span class="comment">// Nombre d&#39;arrete</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;     <span class="keywordtype">int</span>                        _S; <span class="comment">// Nombre noeuds</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;     <a class="code" href="structliste__adjacence__t.html">liste_adjacence_t</a>*         _liste_adj;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;     <a class="code" href="structmatrice__adjacence__t.html">matrice_adjacence_t</a>*       _matrice_adj;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     <a class="code" href="structmatrice__laplace__t.html">matrice_laplace_t</a>*         _matrice_lap;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;     <a class="code" href="structsommet.html">sommet_t</a>**                 _tabS;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;     <a class="code" href="classGraphe.html#a3d3949338bc93bf4edcfdc7310e4234f">Graphe</a>(std::string path);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;     <a class="code" href="classGraphe.html#a673c897db564767e9ace7169a5357310">~Graphe</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a983bd623b721d7485805d252008d82f4">charger</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#ae6dabb6a2315a88f7e0b35956d59a46b">creer_listes_adjacences</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#ad6bf6139a94a026f4288e5ba1eb53e08">creer_matrice_adjacences</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a01a623b6cfe3fcc38ef3ed0d3eb13226">creer_matrice_laplace</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;     <a class="code" href="structparcours__t.html">parcours_t</a>* <a class="code" href="classGraphe.html#ae824f4fe5eadd580272296b2e7cae561">parcours_largeur</a>(<a class="code" href="structsommet.html">sommet_t</a>* s);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;     <a class="code" href="structparcours__t.html">parcours_t</a>* <a class="code" href="classGraphe.html#a420e580d3803ee8ea7435ea7c15b2a91">parcours_profondeur</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a8b6929c8f5869174c03f3ab2e4ec1fc8">afficher_parcours_profondeur</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;     </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a074adbc6a1f35fea18ede2a5be2ac767">DFS_visiter_noeud</a>(<a class="code" href="structsommet.html">sommet_t</a>* u, <span class="keywordtype">int</span>* time, <a class="code" href="structparcours__t.html">parcours_t</a>* p);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;     </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a0b150feac4a452b853ed6ed5be8d1c21">afficher_listes_adjacences</a>(<a class="code" href="structliste__adjacence__t.html">liste_adjacence_t</a>* l);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a550984fee48fd6106686f45b09d7599d">afficher_matrice_adjacences</a>(<a class="code" href="structmatrice__adjacence__t.html">matrice_adjacence_t</a>* l);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classGraphe.html#a63126f39c2ab632b7a478bca7f902075">afficher_chemin</a>(<a class="code" href="structsommet.html">sommet_t</a>* i, <a class="code" href="structsommet.html">sommet_t</a>* j);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classGraphe_html_a0b150feac4a452b853ed6ed5be8d1c21"><div class="ttname"><a href="classGraphe.html#a0b150feac4a452b853ed6ed5be8d1c21">Graphe::afficher_listes_adjacences</a></div><div class="ttdeci">void afficher_listes_adjacences(liste_adjacence_t *l)</div><div class="ttdoc">Affichage liste d&#39;adjacences. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00426">graphe.cpp:426</a></div></div>
+<div class="ttc" id="classGraphe_html_a3d3949338bc93bf4edcfdc7310e4234f"><div class="ttname"><a href="classGraphe.html#a3d3949338bc93bf4edcfdc7310e4234f">Graphe::Graphe</a></div><div class="ttdeci">Graphe(std::string path)</div><div class="ttdoc">Constructeur de la structure de graphe. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00014">graphe.cpp:14</a></div></div>
+<div class="ttc" id="classListe_html"><div class="ttname"><a href="classListe.html">Liste</a></div><div class="ttdef"><b>Definition:</b> <a href="liste_8hpp_source.html#l00007">liste.hpp:7</a></div></div>
+<div class="ttc" id="structmatrice__laplace__t_html"><div class="ttname"><a href="structmatrice__laplace__t.html">matrice_laplace_t</a></div><div class="ttdef"><b>Definition:</b> <a href="graphe_8hpp_source.html#l00019">graphe.hpp:19</a></div></div>
+<div class="ttc" id="classGraphe_html_a63126f39c2ab632b7a478bca7f902075"><div class="ttname"><a href="classGraphe.html#a63126f39c2ab632b7a478bca7f902075">Graphe::afficher_chemin</a></div><div class="ttdeci">void afficher_chemin(sommet_t *i, sommet_t *j)</div><div class="ttdoc">Affichage chemin. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00588">graphe.cpp:588</a></div></div>
+<div class="ttc" id="classStructure_html"><div class="ttname"><a href="classStructure.html">Structure</a></div><div class="ttdoc">Classe gerant les structures de données chargées dans l&#39;IHM. </div><div class="ttdef"><b>Definition:</b> <a href="structure_8hpp_source.html#l00039">structure.hpp:39</a></div></div>
+<div class="ttc" id="classGraphe_html_ad6bf6139a94a026f4288e5ba1eb53e08"><div class="ttname"><a href="classGraphe.html#ad6bf6139a94a026f4288e5ba1eb53e08">Graphe::creer_matrice_adjacences</a></div><div class="ttdeci">void creer_matrice_adjacences()</div><div class="ttdoc">Creer matrice d&#39;adjacence. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00249">graphe.cpp:249</a></div></div>
+<div class="ttc" id="classGraphe_html_a8b6929c8f5869174c03f3ab2e4ec1fc8"><div class="ttname"><a href="classGraphe.html#a8b6929c8f5869174c03f3ab2e4ec1fc8">Graphe::afficher_parcours_profondeur</a></div><div class="ttdeci">void afficher_parcours_profondeur()</div><div class="ttdoc">Affichage du parcours en profondeur. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00603">graphe.cpp:603</a></div></div>
+<div class="ttc" id="classGraphe_html_a420e580d3803ee8ea7435ea7c15b2a91"><div class="ttname"><a href="classGraphe.html#a420e580d3803ee8ea7435ea7c15b2a91">Graphe::parcours_profondeur</a></div><div class="ttdeci">parcours_t * parcours_profondeur()</div><div class="ttdoc">Parcours en profondeur. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00612">graphe.cpp:612</a></div></div>
+<div class="ttc" id="structure_8hpp_html"><div class="ttname"><a href="structure_8hpp.html">structure.hpp</a></div><div class="ttdoc">Gère les structures de données. </div></div>
+<div class="ttc" id="structparcours__t_html"><div class="ttname"><a href="structparcours__t.html">parcours_t</a></div><div class="ttdef"><b>Definition:</b> <a href="graphe_8hpp_source.html#l00031">graphe.hpp:31</a></div></div>
+<div class="ttc" id="structmatrice__adjacence__t_html"><div class="ttname"><a href="structmatrice__adjacence__t.html">matrice_adjacence_t</a></div><div class="ttdef"><b>Definition:</b> <a href="graphe_8hpp_source.html#l00025">graphe.hpp:25</a></div></div>
+<div class="ttc" id="structsommet_html"><div class="ttname"><a href="structsommet.html">sommet</a></div><div class="ttdef"><b>Definition:</b> <a href="file_8hpp_source.html#l00006">file.hpp:6</a></div></div>
+<div class="ttc" id="classGraphe_html_ae6dabb6a2315a88f7e0b35956d59a46b"><div class="ttname"><a href="classGraphe.html#ae6dabb6a2315a88f7e0b35956d59a46b">Graphe::creer_listes_adjacences</a></div><div class="ttdeci">void creer_listes_adjacences()</div><div class="ttdoc">Creer liste d&#39;adjacence. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00173">graphe.cpp:173</a></div></div>
+<div class="ttc" id="classGraphe_html_a074adbc6a1f35fea18ede2a5be2ac767"><div class="ttname"><a href="classGraphe.html#a074adbc6a1f35fea18ede2a5be2ac767">Graphe::DFS_visiter_noeud</a></div><div class="ttdeci">void DFS_visiter_noeud(sommet_t *u, int *time, parcours_t *p)</div><div class="ttdoc">Fonction interne à l&#39;algorithme DFS. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00639">graphe.cpp:639</a></div></div>
+<div class="ttc" id="classGraphe_html_ae824f4fe5eadd580272296b2e7cae561"><div class="ttname"><a href="classGraphe.html#ae824f4fe5eadd580272296b2e7cae561">Graphe::parcours_largeur</a></div><div class="ttdeci">parcours_t * parcours_largeur(sommet_t *s)</div><div class="ttdoc">Parcours en largeur. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00523">graphe.cpp:523</a></div></div>
+<div class="ttc" id="classGraphe_html"><div class="ttname"><a href="classGraphe.html">Graphe</a></div><div class="ttdoc">Classe gerant la structure de donnée de graphe. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8hpp_source.html#l00039">graphe.hpp:39</a></div></div>
+<div class="ttc" id="classGraphe_html_a673c897db564767e9ace7169a5357310"><div class="ttname"><a href="classGraphe.html#a673c897db564767e9ace7169a5357310">Graphe::~Graphe</a></div><div class="ttdeci">~Graphe()</div><div class="ttdoc">Destructeur. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00489">graphe.cpp:489</a></div></div>
+<div class="ttc" id="classGraphe_html_a01a623b6cfe3fcc38ef3ed0d3eb13226"><div class="ttname"><a href="classGraphe.html#a01a623b6cfe3fcc38ef3ed0d3eb13226">Graphe::creer_matrice_laplace</a></div><div class="ttdeci">void creer_matrice_laplace()</div><div class="ttdoc">Creer matrice laplacienne. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00342">graphe.cpp:342</a></div></div>
+<div class="ttc" id="classGraphe_html_a550984fee48fd6106686f45b09d7599d"><div class="ttname"><a href="classGraphe.html#a550984fee48fd6106686f45b09d7599d">Graphe::afficher_matrice_adjacences</a></div><div class="ttdeci">void afficher_matrice_adjacences(matrice_adjacence_t *l)</div><div class="ttdoc">Affichage matrice d&#39;adjacences. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00447">graphe.cpp:447</a></div></div>
+<div class="ttc" id="classFile_html"><div class="ttname"><a href="classFile.html">File</a></div><div class="ttdef"><b>Definition:</b> <a href="file_8hpp_source.html#l00014">file.hpp:14</a></div></div>
+<div class="ttc" id="classGraphe_html_a983bd623b721d7485805d252008d82f4"><div class="ttname"><a href="classGraphe.html#a983bd623b721d7485805d252008d82f4">Graphe::charger</a></div><div class="ttdeci">void charger()</div><div class="ttdoc">Chargement du graphe. </div><div class="ttdef"><b>Definition:</b> <a href="graphe_8cpp_source.html#l00038">graphe.cpp:38</a></div></div>
+<div class="ttc" id="structliste__adjacence__t_html"><div class="ttname"><a href="structliste__adjacence__t.html">liste_adjacence_t</a></div><div class="ttdef"><b>Definition:</b> <a href="graphe_8hpp_source.html#l00013">graphe.hpp:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi 19 Mars 2015 17:00:17 pour Visualiseur d&#39;algorithme par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

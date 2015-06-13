@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Visualiseur d&#39;algorithme:  Fichier source de shader.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Visualiseur d&#39;algorithme
+   </div>
+   <div id="projectbrief">Framework pour la visualisation d&#39;algorithmes interactifs</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">shader.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="shader_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef _SHADER_</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _SHADER_</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifdef WIN32</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">        #include &lt;GL/glew.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">        #define GL3_PROTOTYPES 1</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">        #include &lt;GL3/gl3.h&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QOpenGLFunctions&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classShader.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classShader.html">Shader</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;     <span class="keyword">const</span> GLchar*  _vertex_source;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;     <span class="keyword">const</span> GLchar*  _fragme_source;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;     GLint      _id_position;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;     GLint      _id_texture;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;     GLint      _id_color;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;     GLint      _id_vertex_shader;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;     GLint      _id_fragme_shader;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;     GLuint     _id_shader_program;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     GLint      _vertex_source_length;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     GLint      _fragme_source_length;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     QOpenGLFunctions*  _resolve_fonctions;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     <a class="code" href="classShader.html#a2005793fac68487fb1f8b76fcdd6dfa2">Shader</a>(std::string ver_shad, std::string fra_shad);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;     </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;     <a class="code" href="classShader.html#aff01df87e8a102f270b5b135a295e59d">~Shader</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classShader.html#ad6fe36e8abe4842214b604467ae653c4">del</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classShader.html#a41eeb2d28f161e822e09b8471ceb1bad">charger</a>(QOpenGLFunctions* function_contexte);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="classShader.html#a2ecd01e476085e7e53d8d2d0ffb45944">verif_compil_shader</a>(GLint id_shader, std::string nom_shader);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;     <span class="keywordtype">bool</span> <a class="code" href="classShader.html#af019e34beca44951ef6245fcdfc0daae">verif_link_shader</a>(GLint id_program, std::string nom);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;     <span class="comment">// Getters</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;     GLint get_id_position();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;     GLint get_id_texture();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;     GLint get_id_color();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;     GLint get_id_shader_program();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;     GLint get_id_vertex_shader();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;     GLint get_id_fragme_shader();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;     GLint get_vertex_source_length();</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;     GLint get_fragme_source_length();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     <span class="keyword">const</span> GLchar* get_vertex_source();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;     <span class="keyword">const</span> GLchar* get_fragme_source();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;     <span class="comment">// Setters</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;     <span class="comment">//</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;     <span class="keywordtype">void</span> set_id_position(GLint);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;     <span class="keywordtype">void</span> set_id_texture(GLint);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;     <span class="keywordtype">void</span> set_id_color(GLint);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;     <span class="keywordtype">void</span> set_id_shader_program(GLint);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;     <span class="keywordtype">void</span> set_id_vertex_shader(GLint);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;     <span class="keywordtype">void</span> set_id_fragme_shader(GLint);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classShader_html_a2005793fac68487fb1f8b76fcdd6dfa2"><div class="ttname"><a href="classShader.html#a2005793fac68487fb1f8b76fcdd6dfa2">Shader::Shader</a></div><div class="ttdeci">Shader(std::string ver_shad, std::string fra_shad)</div><div class="ttdoc">Constructeur shader. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00010">shader.cpp:10</a></div></div>
+<div class="ttc" id="classShader_html"><div class="ttname"><a href="classShader.html">Shader</a></div><div class="ttdoc">Classe gerant la compilation et verrouillage du vertex et fragment shaders. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8hpp_source.html#l00022">shader.hpp:22</a></div></div>
+<div class="ttc" id="classShader_html_ad6fe36e8abe4842214b604467ae653c4"><div class="ttname"><a href="classShader.html#ad6fe36e8abe4842214b604467ae653c4">Shader::del</a></div><div class="ttdeci">void del()</div><div class="ttdoc">Fonction de formattage. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00173">shader.cpp:173</a></div></div>
+<div class="ttc" id="classShader_html_aff01df87e8a102f270b5b135a295e59d"><div class="ttname"><a href="classShader.html#aff01df87e8a102f270b5b135a295e59d">Shader::~Shader</a></div><div class="ttdeci">~Shader()</div><div class="ttdoc">Destructeur shader. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00042">shader.cpp:42</a></div></div>
+<div class="ttc" id="classShader_html_af019e34beca44951ef6245fcdfc0daae"><div class="ttname"><a href="classShader.html#af019e34beca44951ef6245fcdfc0daae">Shader::verif_link_shader</a></div><div class="ttdeci">bool verif_link_shader(GLint id_program, std::string nom)</div><div class="ttdoc">Fonction de verification de l&#39;edition des liens. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00101">shader.cpp:101</a></div></div>
+<div class="ttc" id="classShader_html_a2ecd01e476085e7e53d8d2d0ffb45944"><div class="ttname"><a href="classShader.html#a2ecd01e476085e7e53d8d2d0ffb45944">Shader::verif_compil_shader</a></div><div class="ttdeci">bool verif_compil_shader(GLint id_shader, std::string nom_shader)</div><div class="ttdoc">Fonction de verification de la compilation. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00137">shader.cpp:137</a></div></div>
+<div class="ttc" id="classShader_html_a41eeb2d28f161e822e09b8471ceb1bad"><div class="ttname"><a href="classShader.html#a41eeb2d28f161e822e09b8471ceb1bad">Shader::charger</a></div><div class="ttdeci">void charger(QOpenGLFunctions *function_contexte)</div><div class="ttdoc">Fonction de chargement. </div><div class="ttdef"><b>Definition:</b> <a href="shader_8cpp_source.html#l00051">shader.cpp:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Jeudi 19 Mars 2015 17:00:17 pour Visualiseur d&#39;algorithme par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

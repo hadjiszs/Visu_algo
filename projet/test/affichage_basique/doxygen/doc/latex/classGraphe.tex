@@ -1,0 +1,258 @@
+\hypertarget{classGraphe}{\section{Référence de la classe Graphe}
+\label{classGraphe}\index{Graphe@{Graphe}}
+}
+
+
+Classe gerant la structure de donnée de graphe.  
+
+
+
+
+{\ttfamily \#include $<$graphe.\+hpp$>$}
+
+
+
+Graphe d'héritage de Graphe\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classGraphe__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Graphe\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{classGraphe__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraphe_a3d3949338bc93bf4edcfdc7310e4234f}{Graphe} (std\+::string path)
+\begin{DoxyCompactList}\small\item\em Constructeur de la structure de graphe. \end{DoxyCompactList}\item 
+\hypertarget{classGraphe_a673c897db564767e9ace7169a5357310}{\hyperlink{classGraphe_a673c897db564767e9ace7169a5357310}{$\sim$\+Graphe} ()}\label{classGraphe_a673c897db564767e9ace7169a5357310}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a983bd623b721d7485805d252008d82f4}{charger} ()
+\begin{DoxyCompactList}\small\item\em Chargement du graphe. \end{DoxyCompactList}\item 
+\hypertarget{classGraphe_ae6dabb6a2315a88f7e0b35956d59a46b}{void \hyperlink{classGraphe_ae6dabb6a2315a88f7e0b35956d59a46b}{creer\+\_\+listes\+\_\+adjacences} ()}\label{classGraphe_ae6dabb6a2315a88f7e0b35956d59a46b}
+
+\begin{DoxyCompactList}\small\item\em Creer liste d'adjacence. \end{DoxyCompactList}\item 
+\hypertarget{classGraphe_ad6bf6139a94a026f4288e5ba1eb53e08}{void \hyperlink{classGraphe_ad6bf6139a94a026f4288e5ba1eb53e08}{creer\+\_\+matrice\+\_\+adjacences} ()}\label{classGraphe_ad6bf6139a94a026f4288e5ba1eb53e08}
+
+\begin{DoxyCompactList}\small\item\em Creer matrice d'adjacence. \end{DoxyCompactList}\item 
+\hypertarget{classGraphe_a01a623b6cfe3fcc38ef3ed0d3eb13226}{void \hyperlink{classGraphe_a01a623b6cfe3fcc38ef3ed0d3eb13226}{creer\+\_\+matrice\+\_\+laplace} ()}\label{classGraphe_a01a623b6cfe3fcc38ef3ed0d3eb13226}
+
+\begin{DoxyCompactList}\small\item\em Creer matrice laplacienne. \end{DoxyCompactList}\item 
+\hyperlink{structparcours__t}{parcours\+\_\+t} $\ast$ \hyperlink{classGraphe_ae824f4fe5eadd580272296b2e7cae561}{parcours\+\_\+largeur} (\hyperlink{structsommet}{sommet\+\_\+t} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Parcours en largeur. \end{DoxyCompactList}\item 
+\hyperlink{structparcours__t}{parcours\+\_\+t} $\ast$ \hyperlink{classGraphe_a420e580d3803ee8ea7435ea7c15b2a91}{parcours\+\_\+profondeur} ()
+\begin{DoxyCompactList}\small\item\em Parcours en profondeur. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a8b6929c8f5869174c03f3ab2e4ec1fc8}{afficher\+\_\+parcours\+\_\+profondeur} ()
+\begin{DoxyCompactList}\small\item\em Affichage du parcours en profondeur. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a074adbc6a1f35fea18ede2a5be2ac767}{D\+F\+S\+\_\+visiter\+\_\+noeud} (\hyperlink{structsommet}{sommet\+\_\+t} $\ast$u, int $\ast$time, \hyperlink{structparcours__t}{parcours\+\_\+t} $\ast$p)
+\begin{DoxyCompactList}\small\item\em Fonction interne à l'algorithme D\+F\+S. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a0b150feac4a452b853ed6ed5be8d1c21}{afficher\+\_\+listes\+\_\+adjacences} (\hyperlink{structliste__adjacence__t}{liste\+\_\+adjacence\+\_\+t} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Affichage liste d'adjacences. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a550984fee48fd6106686f45b09d7599d}{afficher\+\_\+matrice\+\_\+adjacences} (\hyperlink{structmatrice__adjacence__t}{matrice\+\_\+adjacence\+\_\+t} $\ast$l)
+\begin{DoxyCompactList}\small\item\em Affichage matrice d'adjacences. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphe_a63126f39c2ab632b7a478bca7f902075}{afficher\+\_\+chemin} (\hyperlink{structsommet}{sommet\+\_\+t} $\ast$i, \hyperlink{structsommet}{sommet\+\_\+t} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Affichage chemin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Classe gerant la structure de donnée de graphe. 
+
+Définition à la ligne 39 du fichier graphe.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classGraphe_a3d3949338bc93bf4edcfdc7310e4234f}{\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\index{Graphe@{Graphe}!Graphe@{Graphe}}
+\subsubsection[{Graphe}]{\setlength{\rightskip}{0pt plus 5cm}Graphe\+::\+Graphe (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a3d3949338bc93bf4edcfdc7310e4234f}
+
+
+Constructeur de la structure de graphe. 
+
+\hyperlink{classStructure}{Structure} de données permettant de manipuler des graphes et des algos de graphe. Le graphe ne sera pas charger, il est juste créer, pour le charger il faut appelé explicitement la fonction \hyperlink{classGraphe_a983bd623b721d7485805d252008d82f4}{charger()} 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em path} & chemin vers le fichier contenant le graphe \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 14 du fichier graphe.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classGraphe_a63126f39c2ab632b7a478bca7f902075}{\index{Graphe@{Graphe}!afficher\+\_\+chemin@{afficher\+\_\+chemin}}
+\index{afficher\+\_\+chemin@{afficher\+\_\+chemin}!Graphe@{Graphe}}
+\subsubsection[{afficher\+\_\+chemin}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::afficher\+\_\+chemin (
+\begin{DoxyParamCaption}
+\item[{{\bf sommet\+\_\+t} $\ast$}]{i, }
+\item[{{\bf sommet\+\_\+t} $\ast$}]{j}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a63126f39c2ab632b7a478bca7f902075}
+
+
+Affichage chemin. 
+
+affiche le chemin après un B\+F\+S, permet de voir le plus court chemin entre deux noeud passé en parametre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em i} & sommet de depart \\
+\hline
+\mbox{\tt in}  & {\em j} & sommet d'arrivé \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 588 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a0b150feac4a452b853ed6ed5be8d1c21}{\index{Graphe@{Graphe}!afficher\+\_\+listes\+\_\+adjacences@{afficher\+\_\+listes\+\_\+adjacences}}
+\index{afficher\+\_\+listes\+\_\+adjacences@{afficher\+\_\+listes\+\_\+adjacences}!Graphe@{Graphe}}
+\subsubsection[{afficher\+\_\+listes\+\_\+adjacences}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::afficher\+\_\+listes\+\_\+adjacences (
+\begin{DoxyParamCaption}
+\item[{{\bf liste\+\_\+adjacence\+\_\+t} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a0b150feac4a452b853ed6ed5be8d1c21}
+
+
+Affichage liste d'adjacences. 
+
+T\+O\+D\+O\+: utiliser operator$<$$<$ 
+
+Définition à la ligne 426 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a550984fee48fd6106686f45b09d7599d}{\index{Graphe@{Graphe}!afficher\+\_\+matrice\+\_\+adjacences@{afficher\+\_\+matrice\+\_\+adjacences}}
+\index{afficher\+\_\+matrice\+\_\+adjacences@{afficher\+\_\+matrice\+\_\+adjacences}!Graphe@{Graphe}}
+\subsubsection[{afficher\+\_\+matrice\+\_\+adjacences}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::afficher\+\_\+matrice\+\_\+adjacences (
+\begin{DoxyParamCaption}
+\item[{{\bf matrice\+\_\+adjacence\+\_\+t} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a550984fee48fd6106686f45b09d7599d}
+
+
+Affichage matrice d'adjacences. 
+
+T\+O\+D\+O\+: utiliser operator$<$$<$ 
+
+Définition à la ligne 447 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a8b6929c8f5869174c03f3ab2e4ec1fc8}{\index{Graphe@{Graphe}!afficher\+\_\+parcours\+\_\+profondeur@{afficher\+\_\+parcours\+\_\+profondeur}}
+\index{afficher\+\_\+parcours\+\_\+profondeur@{afficher\+\_\+parcours\+\_\+profondeur}!Graphe@{Graphe}}
+\subsubsection[{afficher\+\_\+parcours\+\_\+profondeur}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::afficher\+\_\+parcours\+\_\+profondeur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a8b6929c8f5869174c03f3ab2e4ec1fc8}
+
+
+Affichage du parcours en profondeur. 
+
+Affiche le parcours en profondeur resultant, effectuer l'appel à cette fonction après avoir fait un parcours en profndeur 
+
+Définition à la ligne 603 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a983bd623b721d7485805d252008d82f4}{\index{Graphe@{Graphe}!charger@{charger}}
+\index{charger@{charger}!Graphe@{Graphe}}
+\subsubsection[{charger}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::charger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGraphe_a983bd623b721d7485805d252008d82f4}
+
+
+Chargement du graphe. 
+
+Chargement du graphe de maniere explicite à partir de l'appel de cette fonction 
+
+Implémente \hyperlink{classStructure_ae99db977c0b38122644cf458ea3d5974}{Structure}.
+
+
+
+Définition à la ligne 38 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a074adbc6a1f35fea18ede2a5be2ac767}{\index{Graphe@{Graphe}!D\+F\+S\+\_\+visiter\+\_\+noeud@{D\+F\+S\+\_\+visiter\+\_\+noeud}}
+\index{D\+F\+S\+\_\+visiter\+\_\+noeud@{D\+F\+S\+\_\+visiter\+\_\+noeud}!Graphe@{Graphe}}
+\subsubsection[{D\+F\+S\+\_\+visiter\+\_\+noeud}]{\setlength{\rightskip}{0pt plus 5cm}void Graphe\+::\+D\+F\+S\+\_\+visiter\+\_\+noeud (
+\begin{DoxyParamCaption}
+\item[{{\bf sommet\+\_\+t} $\ast$}]{u, }
+\item[{int $\ast$}]{time, }
+\item[{{\bf parcours\+\_\+t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a074adbc6a1f35fea18ede2a5be2ac767}
+
+
+Fonction interne à l'algorithme D\+F\+S. 
+
+
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em u} & sommet à visiter \\
+\hline
+\mbox{\tt in}  & {\em time} & date à laquelle on visite le noeud \\
+\hline
+\mbox{\tt in}  & {\em p} & parcours dans lequel est integré la visite du noeud \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 639 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_ae824f4fe5eadd580272296b2e7cae561}{\index{Graphe@{Graphe}!parcours\+\_\+largeur@{parcours\+\_\+largeur}}
+\index{parcours\+\_\+largeur@{parcours\+\_\+largeur}!Graphe@{Graphe}}
+\subsubsection[{parcours\+\_\+largeur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf parcours\+\_\+t} $\ast$ Graphe\+::parcours\+\_\+largeur (
+\begin{DoxyParamCaption}
+\item[{{\bf sommet\+\_\+t} $\ast$}]{s}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_ae824f4fe5eadd580272296b2e7cae561}
+
+
+Parcours en largeur. 
+
+Algorithme B\+F\+S, parcours en largeur sur le graphe courant 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em s} & sommet de depart pour le parcours en largeur \\
+\hline
+\mbox{\tt out}  & {\em parcours} & en largeur resultant \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 523 du fichier graphe.\+cpp.
+
+\hypertarget{classGraphe_a420e580d3803ee8ea7435ea7c15b2a91}{\index{Graphe@{Graphe}!parcours\+\_\+profondeur@{parcours\+\_\+profondeur}}
+\index{parcours\+\_\+profondeur@{parcours\+\_\+profondeur}!Graphe@{Graphe}}
+\subsubsection[{parcours\+\_\+profondeur}]{\setlength{\rightskip}{0pt plus 5cm}{\bf parcours\+\_\+t} $\ast$ Graphe\+::parcours\+\_\+profondeur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classGraphe_a420e580d3803ee8ea7435ea7c15b2a91}
+
+
+Parcours en profondeur. 
+
+Algorithme D\+F\+S, parcours en profondeur sur le graphe courant 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt out}  & {\em parcours} & en largeur resultant \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 612 du fichier graphe.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{graphe_8hpp}{graphe.\+hpp}\item 
+\hyperlink{graphe_8cpp}{graphe.\+cpp}\end{DoxyCompactItemize}

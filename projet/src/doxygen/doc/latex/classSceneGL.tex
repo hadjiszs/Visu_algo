@@ -1,0 +1,258 @@
+\hypertarget{classSceneGL}{\section{Référence de la classe Scene\+G\+L}
+\label{classSceneGL}\index{Scene\+G\+L@{Scene\+G\+L}}
+}
+
+
+classe gerant le contexte Open\+G\+L de l'application  
+
+
+
+
+{\ttfamily \#include $<$scene.\+hpp$>$}
+
+
+
+Graphe d'héritage de Scene\+G\+L\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classSceneGL__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Graphe de collaboration de Scene\+G\+L\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classSceneGL__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSceneGL_a6af9b11a1a96b24ef2bd2d57c910ccbf}{Scene\+G\+L} (Q\+Widget $\ast$parent=0, \hyperlink{classStructure}{Structure} $\ast$str=nullptr, Qt\+::\+Window\+Flags f=0)
+\begin{DoxyCompactList}\small\item\em Constructeur de la scene G\+L. \end{DoxyCompactList}\item 
+\hyperlink{classSceneGL_a0e4266dea6edaca8b5274b9d74e4fe56}{$\sim$\+Scene\+G\+L} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_ad81e01d02213ca0bdbec735260408f23}{initialize\+G\+L} ()
+\begin{DoxyCompactList}\small\item\em Initialise le contexte Open\+G\+L. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_a4e3548c5440b13ff4fe0fb76bc766276}{paint\+G\+L} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui est appelé quand le widget a besoin d'etre repaint. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_a70997c4a649f1b17710a14549bf6990b}{cleanup\+G\+L} ()
+\begin{DoxyCompactList}\small\item\em Fonction de formattage. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_a45a49b85da1c7cb756b622c97028bf1b}{resize\+G\+L} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Fonction de redimensionnement. \end{DoxyCompactList}\item 
+\hyperlink{classStructure}{Structure} $\ast$ \hyperlink{classSceneGL_a53d49272e92f87c42ee726604430e778}{get\+\_\+structure} ()
+\begin{DoxyCompactList}\small\item\em Getters de la structure. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_a409672c6feccc6d1d6bc5dcdcfa7e9c6}{charger\+\_\+contenu\+\_\+graphique} ()
+\begin{DoxyCompactList}\small\item\em Charger contenu graphique. \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_a9da729a38d1765fb28444ef032f56f84}{mouse\+Press\+Event} (Q\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em handler evenement clique souris \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_af057296bff1d5ffc94e22144aff358c7}{mouse\+Move\+Event} (Q\+Mouse\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em handler evenement mouvement souris \end{DoxyCompactList}\item 
+void \hyperlink{classSceneGL_abf3361d8d735934b85961bb949a3020c}{wheel\+Event} (Q\+Wheel\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em handler evenement scroll souris \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe gerant le contexte Open\+G\+L de l'application 
+
+Définition à la ligne 45 du fichier scene.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classSceneGL_a6af9b11a1a96b24ef2bd2d57c910ccbf}{\index{Scene\+G\+L@{Scene\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\index{Scene\+G\+L@{Scene\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{Scene\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+G\+L\+::\+Scene\+G\+L (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}, }
+\item[{{\bf Structure} $\ast$}]{str = {\ttfamily nullptr}, }
+\item[{Qt\+::\+Window\+Flags}]{f = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a6af9b11a1a96b24ef2bd2d57c910ccbf}
+
+
+Constructeur de la scene G\+L. 
+
+il s'agit de la fenetre principale, elle n'a pas de parent, mais on laisse le parametre par commodité 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em parent} & le widget parent où sera contenu le contexte Open\+G\+L \\
+\hline
+\mbox{\tt in}  & {\em str} & la structure \\
+\hline
+\mbox{\tt in}  & {\em flags} & flags de widget \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 49 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a0e4266dea6edaca8b5274b9d74e4fe56}{\index{Scene\+G\+L@{Scene\+G\+L}!````~Scene\+G\+L@{$\sim$\+Scene\+G\+L}}
+\index{````~Scene\+G\+L@{$\sim$\+Scene\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{$\sim$\+Scene\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+G\+L\+::$\sim$\+Scene\+G\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a0e4266dea6edaca8b5274b9d74e4fe56}
+
+
+Destructeur. 
+
+Destructeur 
+
+Définition à la ligne 590 du fichier scene.\+cpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classSceneGL_a409672c6feccc6d1d6bc5dcdcfa7e9c6}{\index{Scene\+G\+L@{Scene\+G\+L}!charger\+\_\+contenu\+\_\+graphique@{charger\+\_\+contenu\+\_\+graphique}}
+\index{charger\+\_\+contenu\+\_\+graphique@{charger\+\_\+contenu\+\_\+graphique}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{charger\+\_\+contenu\+\_\+graphique}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::charger\+\_\+contenu\+\_\+graphique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a409672c6feccc6d1d6bc5dcdcfa7e9c6}
+
+
+Charger contenu graphique. 
+
+Charge le contenu graphique à afficher dans le contexte Open\+G\+L 
+
+Définition à la ligne 175 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a70997c4a649f1b17710a14549bf6990b}{\index{Scene\+G\+L@{Scene\+G\+L}!cleanup\+G\+L@{cleanup\+G\+L}}
+\index{cleanup\+G\+L@{cleanup\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{cleanup\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::cleanup\+G\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a70997c4a649f1b17710a14549bf6990b}
+
+
+Fonction de formattage. 
+
+Cette fonction supprime les identifiants de shaders et vide les buffers 
+
+Définition à la ligne 399 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a53d49272e92f87c42ee726604430e778}{\index{Scene\+G\+L@{Scene\+G\+L}!get\+\_\+structure@{get\+\_\+structure}}
+\index{get\+\_\+structure@{get\+\_\+structure}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{get\+\_\+structure}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Structure} $\ast$ Scene\+G\+L\+::get\+\_\+structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a53d49272e92f87c42ee726604430e778}
+
+
+Getters de la structure. 
+
+Getters de la structure chargé dans la scene Open\+G\+L courante 
+
+Définition à la ligne 585 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_ad81e01d02213ca0bdbec735260408f23}{\index{Scene\+G\+L@{Scene\+G\+L}!initialize\+G\+L@{initialize\+G\+L}}
+\index{initialize\+G\+L@{initialize\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{initialize\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::initialize\+G\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_ad81e01d02213ca0bdbec735260408f23}
+
+
+Initialise le contexte Open\+G\+L. 
+
+Cette fonction est appelé une fois avant le premier appel à paint\+G\+L ou à resize\+G\+L 
+
+Définition à la ligne 89 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_af057296bff1d5ffc94e22144aff358c7}{\index{Scene\+G\+L@{Scene\+G\+L}!mouse\+Move\+Event@{mouse\+Move\+Event}}
+\index{mouse\+Move\+Event@{mouse\+Move\+Event}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{mouse\+Move\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::mouse\+Move\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classSceneGL_af057296bff1d5ffc94e22144aff358c7}
+
+
+handler evenement mouvement souris 
+
+handler appelé lors d'un mouvement de la souris sur le widget courant 
+
+Définition à la ligne 609 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a9da729a38d1765fb28444ef032f56f84}{\index{Scene\+G\+L@{Scene\+G\+L}!mouse\+Press\+Event@{mouse\+Press\+Event}}
+\index{mouse\+Press\+Event@{mouse\+Press\+Event}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{mouse\+Press\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::mouse\+Press\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Mouse\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classSceneGL_a9da729a38d1765fb28444ef032f56f84}
+
+
+handler evenement clique souris 
+
+handler appelé lors d'un clique sur le widget courant 
+
+Définition à la ligne 603 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a4e3548c5440b13ff4fe0fb76bc766276}{\index{Scene\+G\+L@{Scene\+G\+L}!paint\+G\+L@{paint\+G\+L}}
+\index{paint\+G\+L@{paint\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{paint\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::paint\+G\+L (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a4e3548c5440b13ff4fe0fb76bc766276}
+
+
+Fonction qui est appelé quand le widget a besoin d'etre repaint. 
+
+Cette fonction est appelé une fois avant le premier appel à paint\+G\+L ou à resize\+G\+L 
+
+Définition à la ligne 429 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_a45a49b85da1c7cb756b622c97028bf1b}{\index{Scene\+G\+L@{Scene\+G\+L}!resize\+G\+L@{resize\+G\+L}}
+\index{resize\+G\+L@{resize\+G\+L}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{resize\+G\+L}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::resize\+G\+L (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}}\label{classSceneGL_a45a49b85da1c7cb756b622c97028bf1b}
+
+
+Fonction de redimensionnement. 
+
+Cette fonction est appelé lorsque le widget conteneur du contexte Open\+G\+L est redimensionné 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em w} & nouvelle dimension de largeur \\
+\hline
+\mbox{\tt in}  & {\em h} & nouvelle dimension de hauteur \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 424 du fichier scene.\+cpp.
+
+\hypertarget{classSceneGL_abf3361d8d735934b85961bb949a3020c}{\index{Scene\+G\+L@{Scene\+G\+L}!wheel\+Event@{wheel\+Event}}
+\index{wheel\+Event@{wheel\+Event}!Scene\+G\+L@{Scene\+G\+L}}
+\subsubsection[{wheel\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+G\+L\+::wheel\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Wheel\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}}}\label{classSceneGL_abf3361d8d735934b85961bb949a3020c}
+
+
+handler evenement scroll souris 
+
+handler appelé lors d'un scroll de la souris sur le widget courant 
+
+Définition à la ligne 644 du fichier scene.\+cpp.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{scene_8hpp}{scene.\+hpp}\item 
+\hyperlink{scene_8cpp}{scene.\+cpp}\end{DoxyCompactItemize}
