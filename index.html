@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Visu algo by hadjiszs</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Visu algo</h1>
+        <p>Framework pour la visualisation d&#39;executions d&#39;algorithmes intéractifs</p>
+
+        <p class="view"><a href="https://github.com/hadjiszs/Visu_algo">View the Project on GitHub <small>hadjiszs/Visu_algo</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/hadjiszs/Visu_algo/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/hadjiszs/Visu_algo/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/hadjiszs/Visu_algo">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="framework-pour-la-visualisation-dalgorithmes-intéractifs" class="anchor" href="#framework-pour-la-visualisation-dalgorithmes-int%C3%A9ractifs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Framework pour la visualisation d'algorithmes intéractifs</h1>
+
+<p>Base de framework permettant de visualiser en 2D ou 3D l'execution d'un algorithme sur une structure de donnée défini (graphe / arbre / tableau / etc)</p>
+
+<h2>
+<a id="technologie-utilisée" class="anchor" href="#technologie-utilis%C3%A9e" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technologie utilisée</h2>
+
+<ul>
+<li>C++11
+
+<ul>
+<li>Windows: <code>MinGW 4.9.1</code>
+</li>
+<li>Debian sid: <code>g++ (Debian 4.9.1-19) 4.9.1</code>
+</li>
+</ul>
+</li>
+<li>Qt5.4
+
+<ul>
+<li>Windows: <code>QtCreator 3.3.1</code>
+</li>
+<li>Debian sid: <code>qmake version (5.4.0)</code>
+</li>
+</ul>
+</li>
+<li>OpenGL3.3
+
+<ul>
+<li><code>GLSL 330</code></li>
+</ul>
+</li>
+<li>GLM 0.9.6
+
+<ul>
+<li>Manipulation matricielle, pour matrice projection/model/view</li>
+</ul>
+</li>
+<li>GSL 1.16
+
+<ul>
+<li>Pour le calcul des valeurs/vecteurs propres pour la méthode spectral graph drawing</li>
+</ul>
+</li>
+</ul>
+
+<h4>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h4>
+
+<blockquote>
+<p>les algorithmes semi ou complètement intéractifs permettent de combiner les connaissances d'un expert aux capacités de calcul d'une machine pour solutionner un problème. Le but de ce projet serait de proposer un framework permettant de mettre en place un algorithme (semi-)intéractif en permettant à l'utilisateur de visualiser son déroulement et agir sur celui-ci aux moments où il l'aura désiré. Pour ce faire, la plateforme proposée devra mettre à disposition de manière générique les moyens de brancher un algorithme sur celui-ci (notion de template) tout en fournissant les représentations standard de solution (graphe, arbre, vecteur, ...) pour visualisation mais aussi les briques pour en créer d'autres. Il faudra bien sûr réfléchir à l'ergonomique de l'affichage pour le déroulement de l'algorithme (pas à pas, taux de rafraichissement, ...).</p>
+</blockquote>
+
+<h4>
+<a id="rendu" class="anchor" href="#rendu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rendu</h4>
+
+<h5>
+<a id="vidéo" class="anchor" href="#vid%C3%A9o" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vidéo</h5>
+
+<ul>
+<li><a href="https://raw.githubusercontent.com/hadjiszs/Visu_algo/master/demo/billboard.webm">DFS sur un graphe</a></li>
+<li><a href="https://github.com/hadjiszs/Visu_algo/tree/master/demo">Autres</a></li>
+</ul>
+
+<h5>
+<a id="image" class="anchor" href="#image" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image</h5>
+
+<p><img src="http://i.imgur.com/cTnOiS6.png" alt="DFS"></p>
+
+<h1>
+<a id="mode-demploi" class="anchor" href="#mode-demploi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Mode d'emploi</h1>
+
+<h2>
+<a id="exemple-de-structure-de-fichier-de-graphe" class="anchor" href="#exemple-de-structure-de-fichier-de-graphe" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemple de structure de fichier de graphe</h2>
+
+<pre><code>nSommets 12
+oriente 0
+value 0
+complet 0
+debutDefAretes
+0 1
+0 5
+1 2
+1 5
+2 3
+3 6
+3 7
+4 5
+5 6
+5 9
+9 10
+10 11
+finDefAretes
+</code></pre>
+
+<ul>
+<li>
+<code>nSommets</code> : nombre de sommets total</li>
+<li>
+<code>oriente</code> : indique si le graphe est orienté</li>
+<li>
+<code>value</code> : indique si les arêtes du graphe sont pondérées</li>
+<li>
+<code>complet</code> : indique si le graphe est complet</li>
+<li>
+<code>X Y</code> : arête entre le nœud X et Y</li>
+<li>
+<code>finDefAretes</code> : fin de la définition des arêtes</li>
+</ul>
+
+<blockquote>
+<p><em>NB</em>: Les informations d'en-tête ne sont pas tout gérés, elles sont présentes mais pas nécessairement prises en compte dans l'avancement actuel du projet.</p>
+</blockquote>
+
+<h3>
+<a id="compilation" class="anchor" href="#compilation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compilation</h3>
+
+<h4>
+<a id="linux" class="anchor" href="#linux" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Linux</h4>
+
+<pre><code>qmake --version
+</code></pre>
+
+<p>Doit être &gt; 5.4 pour l'utilisation de <code>QOpenGLWidget</code> entre autres</p>
+
+<pre><code>qmake compile.pro
+make
+</code></pre>
+
+<p>Génération du makefile puis compilation</p>
+
+<pre><code>export LC_NUMERIC=C
+</code></pre>
+
+<p>Au cas où Qt aurait modifié le locale</p>
+
+<p>Les warnings de compilation que l'on peut voir sur <a href="https://asciinema.org/a/20182">cette compilation</a> sont liés à <code>GLM</code>.</p>
+
+<h4>
+<a id="windows-7" class="anchor" href="#windows-7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows 7</h4>
+
+<p>Pour compiler sur Windows, il faut télécharger la version de QCreator cité au début. Puis importer le fichier <code>compile.pro</code> pour y créer un nouveau projet.</p>
+
+<p>Il faut ensuite avoir une version de la GSL portée sur Windows. Beaucoup de problèmes surviennent lors du portage de notre code sur Windows.</p>
+
+<p>Exemple de bug rencontré : la moitiée des arêtes de n'affichent pas correctement
+<a href="http://puu.sh/hsMSR/cb1cbfec57.png">Exemple ici</a></p>
+
+<h2>
+<a id="ajout-dune-structure-de-donnée-dans-le-framework" class="anchor" href="#ajout-dune-structure-de-donn%C3%A9e-dans-le-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ajout d'une structure de donnée dans le framework</h2>
+
+<p>Pour ajouter une nouvelle structure de donnée au framework, il faut créer une nouvelle classe héritant de la classe mère <code>Structure</code>. Il faut ensuite impérativement redéfinir les méthodes de chargement (dans lequel il faudra placer dans l'espace les différentes cellules de donnée de la structure).</p>
+
+<h3>
+<a id="exemple-pour-la-structure-tableau" class="anchor" href="#exemple-pour-la-structure-tableau" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exemple pour la structure tableau</h3>
+
+<pre><code>class Tableau : public Structure {
+private:
+    int tableau[10]; // La structure que l'on veut visualiser
+    // herité de la classe Structure :
+    // std::vector&lt;SceneVertex&gt; _vertices;
+    // std::vector&lt;Etat::Case&gt;  _vertex_to_etat;
+public:
+    Tableau(std::string path, TextBox* textbox);
+    void charger();
+    void parcours();
+};
+</code></pre>
+
+<p>Les valeurs de l'objet <code>SceneVertex</code> du vecteur <code>_vertices</code> à la position <code>i</code> correspond au placement spatiale de la case <code>i</code>.
+La valeur <code>Etat::Case</code> du vecteur <code>_vertex_to_etat</code> à la position <code>i</code> correspond au type associé à la case <code>i</code>.</p>
+
+<p>Dans la méthode <code>charger</code>, il faut donc initialiser ces deux vecteurs à partir du fichier d'entrée.
+Pour placer les cases de notre tableau dans l'espace, il suffit de placer la case <code>i</code> sur l'abscisse <code>i</code> tout en laissant à 0 sur les deux autres axes.</p>
+
+<pre><code>void Tableau::charger()
+{
+    _vertices.resize(10);
+    for(int i(0); i &lt; 10; i++)
+    {
+        SceneVertex vertice_courant = { i , 0 , 0 };
+        vertices[i] = vertice_courant;
+    }
+}
+</code></pre>
+
+<p>Chaque valeur de <code>Etat::Case</code> est associé à une structure de donnée de visualisation (donnée 3D, couleurs, etc).</p>
+
+<p>Le vecteur associant l'état à une case est modifiable durant l'exécution de l'algorithme que l'on veut visualiser.</p>
+
+<h2>
+<a id="modification-du-rendu-durant-lexécution" class="anchor" href="#modification-du-rendu-durant-lex%C3%A9cution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modification du rendu durant l'exécution</h2>
+
+<p>Pour visualiser un algorithme, il faut donc se placer dans la classe correspondant à la structure utilisée, puis y implémenter une méthode correspondant à notre algorithme.</p>
+
+<p>Exemple en implémentant un simple algorithme de parcours d'un tableau.</p>
+
+<pre><code>void Tableau::parcours() {
+    for(int i(0); i &lt; 10; i++)
+        _vertex_to_etat[i] = Etat::Case::Parcouru;
+}
+</code></pre>
+
+<p>Ainsi, durant l'exécution de cet algorithme, nous pourrons voir au fur et à mesure la visualisation des cases parcourus dans la boucle. À chaque itération, nous verrons la case <code>i</code> avec les données de visualisation 3D (couleur/modèle 3D etc) correspondant au type <code>Etat::Case::Parcouru</code>.</p>
+
+<h2>
+<a id="ajout-et-modification-des-données-de-rendu-associés-aux-types" class="anchor" href="#ajout-et-modification-des-donn%C3%A9es-de-rendu-associ%C3%A9s-aux-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ajout et modification des données de rendu associés aux types</h2>
+
+<p>Pour ajouter et/ou modifier les données 3D associés aux types, il faut se placer dans <code>SceneGL::charger_contenu_graphique</code> se trouvant dans le fichier <code>scene.cpp</code>, cette fonction va charger au démarrage toutes les données 3D associés aux types enum.</p>
+
+<p>Par exemple, il est possible d'ajouter la valeur enum <code>Etat::Case::Parcouru_Paire</code> et <code>Etat::Case::Parcouru_Impaire</code>. Puis d'y associer les différentes données de visualisation.</p>
+
+<pre><code>init(Etat::Case::Parcouru_Paire, "carre3d.dae", glm::vec3(0.45, 0.45, 0.45), Qt::white, QFont::Monospace);
+init(Etat::Case::Parcouru_Impaire, "mario3d.dae", glm::vec3(0.45, 0.0, 0.0), Qt::blue, QFont::Monospace);
+</code></pre>
+
+<p>Dans ce cas de figure, les cases qui seront associées au type <code>Etat::Case::Parcouru_Paire</code> se verront être visualisé avec le modèle <code>carre3d.dae</code> de couleur gris, et leurs valeurs seront affichés en blanc avec une police de type Monospace.
+Pour les parcourus impaires, ce sera avec le modèle 3d <code>mario3d.dae</code> de couleur rouge, et leurs valeurs seront affichés en bleu avec une police de type Monospace.</p>
+
+<p>Il est ensuite possible de modifier la méthode de parcours en conséquence. </p>
+
+<pre><code>void Tableau::parcours()
+{
+    for(int i(0); i &lt; 10; i++)
+        if(i%2 == 0)
+            _vertex_to_etat[i] = Etat::Case::Parcouru_Paire;
+        else
+            _vertex_to_etat[i] = Etat::Case::Parcouru_Impaire;
+}
+</code></pre>
+
+<h2>
+<a id="fenêtre-de-log" class="anchor" href="#fen%C3%AAtre-de-log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Fenêtre de log</h2>
+
+<p>Pour avoir un suivi personnalisé de l'exécution de l'algorithme, il est possible d'afficher du texte dans une partie de la fenêtre de visualisation.</p>
+
+<p>La classe <code>Tableau</code> hérite de la classe mère <code>Structure</code> qui a un objet de type <code>TextBox</code>, cette classe permet de manipuler le texte se trouvant dans une petite fenêtre de la fenêtre principale. </p>
+
+<pre><code>void Tableau::parcours()
+{
+    int num_ligne = _text_box-&gt;newline();
+    for(int i(0); i &lt; 10; i++)
+    {
+        // nouvelle iteration
+        _text_box-&gt;ajouter("texte ajouter sur la ligne \"num_ligne\"", num_ligne);
+
+        if(i%2 == 0)
+            _vertex_to_etat[i] = Etat::Case::Parcouru_Paire;
+        else
+        _vertex_to_etat[i] = Etat::Case::Parcouru_Impaire;
+
+        _text_box-&gt;remplacer("texte remplaçant la ligne \"num_ligne\" à partir du caractere 0", num_ligne, 0);
+    }
+}
+</code></pre>
+
+<h2>
+<a id="source-de-données-pour-les-graphes" class="anchor" href="#source-de-donn%C3%A9es-pour-les-graphes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source de données pour les graphes</h2>
+
+<h3>
+<a id="banque-de-jolie-graphe-artistique" class="anchor" href="#banque-de-jolie-graphe-artistique" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Banque de jolie graphe artistique</h3>
+
+<ul>
+<li><a href="http://www.cise.ufl.edu/research/sparse/matrices/HB/index.html">http://www.cise.ufl.edu/research/sparse/matrices/HB/index.html</a></li>
+<li><a href="http://www.cise.ufl.edu/research/sparse/matrices/groups.html">http://www.cise.ufl.edu/research/sparse/matrices/groups.html</a></li>
+</ul>
+
+<blockquote>
+<p>récupérable sous format MTX, que l'on peut ensuite adapter à notre structure de fichier de graphe.</p>
+</blockquote>
+
+<h3>
+<a id="autres-banques-de-graphe-représentant-divers-tas-dinformations" class="anchor" href="#autres-banques-de-graphe-repr%C3%A9sentant-divers-tas-dinformations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Autres banques de graphe représentant divers tas d'informations</h3>
+
+<ul>
+<li><a href="http://konect.uni-koblenz.de/networks/">http://konect.uni-koblenz.de/networks/</a></li>
+<li><a href="http://networkrepository.com/index.php">http://networkrepository.com/index.php</a></li>
+<li><a href="http://snap.stanford.edu/data/">http://snap.stanford.edu/data/</a></li>
+<li><a href="http://www-personal.umich.edu/%7Emejn/netdata/">http://www-personal.umich.edu/~mejn/netdata/</a></li>
+<li><a href="http://law.di.unimi.it/datasets.php">http://law.di.unimi.it/datasets.php</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/hadjiszs">hadjiszs</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
