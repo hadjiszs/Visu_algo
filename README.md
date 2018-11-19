@@ -1,13 +1,13 @@
 Visualization for algorithm executions on data structure
 ========================================================
 
-Base de framework permettant de visualiser en 2D ou 3D l'execution d'un algorithme sur une structure de donnée défini (graphe / arbre / tableau / etc)
+2D/3D visualization of the algorithm execution on a data structure. The algorithm, the data structure, and the way to view the structure and the execution is specified by the user.
+
+There is already an implementation for the view and placement on space for the data structure graph and array.
+
+[Getting Started (in french)](https://github.com/hadjiszs/Visu_algo/blob/master/modeemploi.md)
 
 ![DFS](http://i.imgur.com/cTnOiS6.png)
-
-- C++11
-    - Windows: `MinGW 4.9.1`
-    - Debian sid: `g++ (Debian 4.9.1-19) 4.9.1`
     
 ## Dependencies
 
@@ -20,4 +20,4 @@ GSL 1.16 (for specific operations related to spectral graph drawing: SVD)
 
 ## Video examples
 - [DFS on a graph](https://raw.githubusercontent.com/hadjiszs/Visu_algo/master/demo/billboard.webm)
-- [Misc](https://github.com/hadjiszs/Visu_algo/tree/master/demo)
+- [All others video](https://github.com/hadjiszs/Visu_algo/tree/master/demo)
