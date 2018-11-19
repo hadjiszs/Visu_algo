@@ -1,7 +1,7 @@
 Framework pour la visualisation d'algorithmes interactifs
 ====
 
-##Technologie utilisée
+## Technologie utilisée
 - C++11
 	- Windows: `MinGW 4.9.1`
 	- Debian sid: `g++ (Debian 4.9.1-19) 4.9.1`
@@ -15,7 +15,7 @@ Framework pour la visualisation d'algorithmes interactifs
 - GSL 1.16
 	- Pour le calcul des valeurs/vecteurs propres pour la méthode spectral graph drawing
 
-##Exemple de structure de fichier de graphe
+## Exemple de structure de fichier de graphe
 
 ```
 nSommets 12
@@ -47,8 +47,8 @@ finDefAretes
 
 >*NB*: Les informations d'en-tête ne sont pas tout gérés, elles sont présentes mais pas nécessairement prises en compte dans l'avancement actuel du projet.
 
-###Compilation
-####Linux
+### Compilation
+#### Linux
 
 ```
 qmake --version
@@ -68,7 +68,7 @@ Au cas où Qt aurait modifié le locale
 
 Les warnings de compilation que l'on peut voir sur [cette compilation](https://asciinema.org/a/20182) sont liés à `GLM`.
 
-####Windows 7
+#### Windows 7
 Pour compiler sur Windows, il faut télécharger la version de QCreator cité au début. Puis importer le fichier `compile.pro` pour y créer un nouveau projet.
 
 Il faut ensuite avoir une version de la GSL portée sur Windows. Beaucoup de problèmes surviennent lors du portage de notre code sur Windows.
@@ -76,10 +76,10 @@ Il faut ensuite avoir une version de la GSL portée sur Windows. Beaucoup de pro
 Exemple de bug rencontré : la moitiée des arêtes de n'affichent pas correctement
 [Exemple ici](http://puu.sh/hsMSR/cb1cbfec57.png)
 
-##Ajout d'une structure de donnée dans le framework
+## Ajout d'une structure de donnée dans le framework
 Pour ajouter une nouvelle structure de donnée au framework, il faut créer une nouvelle classe héritant de la classe mère `Structure`. Il faut ensuite impérativement redéfinir les méthodes de chargement (dans lequel il faudra placer dans l'espace les différentes cellules de donnée de la structure).
 
-###Exemple pour la structure tableau
+### Exemple pour la structure tableau
 ```
 class Tableau : public Structure {
 private:
@@ -116,7 +116,7 @@ Chaque valeur de `Etat::Case` est associé à une structure de donnée de visual
 
 Le vecteur associant l'état à une case est modifiable durant l'exécution de l'algorithme que l'on veut visualiser.
 
-##Modification du rendu durant l'exécution
+## Modification du rendu durant l'exécution
 Pour visualiser un algorithme, il faut donc se placer dans la classe correspondant à la structure utilisée, puis y implémenter une méthode correspondant à notre algorithme.
 
 Exemple en implémentant un simple algorithme de parcours d'un tableau.
@@ -130,7 +130,7 @@ void Tableau::parcours() {
 
 Ainsi, durant l'exécution de cet algorithme, nous pourrons voir au fur et à mesure la visualisation des cases parcourus dans la boucle. À chaque itération, nous verrons la case `i` avec les données de visualisation 3D (couleur/modèle 3D etc) correspondant au type `Etat::Case::Parcouru`.
 
-##Ajout et modification des données de rendu associés aux types
+## Ajout et modification des données de rendu associés aux types
 Pour ajouter et/ou modifier les données 3D associés aux types, il faut se placer dans `SceneGL::charger_contenu_graphique` se trouvant dans le fichier `scene.cpp`, cette fonction va charger au démarrage toutes les données 3D associés aux types enum.
 
 Par exemple, il est possible d'ajouter la valeur enum `Etat::Case::Parcouru_Paire` et `Etat::Case::Parcouru_Impaire`. Puis d'y associer les différentes données de visualisation.
@@ -156,7 +156,7 @@ void Tableau::parcours()
 }
 ```
 
-##Fenêtre de log
+## Fenêtre de log
 Pour avoir un suivi personnalisé de l'exécution de l'algorithme, il est possible d'afficher du texte dans une partie de la fenêtre de visualisation.
 
 La classe `Tableau` hérite de la classe mère `Structure` qui a un objet de type `TextBox`, cette classe permet de manipuler le texte se trouvant dans une petite fenêtre de la fenêtre principale. 
@@ -180,14 +180,14 @@ void Tableau::parcours()
 }
 ```
 
-##Source de données pour les graphes
-###Banque de jolie graphe artistique
+## Source de données pour les graphes
+### Banque de jolie graphe artistique
 - [http://www.cise.ufl.edu/research/sparse/matrices/HB/index.html](http://www.cise.ufl.edu/research/sparse/matrices/HB/index.html)
 - [http://www.cise.ufl.edu/research/sparse/matrices/groups.html](http://www.cise.ufl.edu/research/sparse/matrices/groups.html)
 
 >récupérable sous format MTX, que l'on peut ensuite adapter à notre structure de fichier de graphe.
 
-###Autres banques de graphe représentant divers tas d'informations
+### Autres banques de graphe représentant divers tas d'informations
 - [http://konect.uni-koblenz.de/networks/](http://konect.uni-koblenz.de/networks/)
 - [http://networkrepository.com/index.php](http://networkrepository.com/index.php)
 - [http://snap.stanford.edu/data/](http://snap.stanford.edu/data/)
